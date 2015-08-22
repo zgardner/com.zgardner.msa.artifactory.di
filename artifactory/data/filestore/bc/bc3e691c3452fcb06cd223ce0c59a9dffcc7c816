@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.zgardner.msa.api.host</groupId>
+  <artifactId>lib</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>lib</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <api.common.lib.version>0.0.1-SNAPSHOT</api.common.lib.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.zgardner.msa.api.common</groupId>
+      <artifactId>lib</artifactId>
+      <version>${api.common.lib.version}</version>
+    </dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,1105 @@
+2015-08-22 18:21:18,031 [art-init] [INFO ] (o.a.w.s.ArtifactoryContextConfigListener:283) - 
+                _   _  __           _                      ____   _____ _____
+     /\        | | (_)/ _|         | |                    / __ \ / ____/ ____|
+    /  \   _ __| |_ _| |_ __ _  ___| |_ ___  _ __ _   _  | |  | | (___| (___
+   / /\ \ | '__| __| |  _/ _` |/ __| __/ _ \| '__| | | | | |  | |\___ \\___ \
+  / ____ \| |  | |_| | || (_| | (__| || (_) | |  | |_| | | |__| |____) |___) |
+ /_/    \_\_|   \__|_|_| \__,_|\___|\__\___/|_|   \__, |  \____/|_____/_____/
+ Version:  3.9.2                                   __/ |
+ Revision: 30204                                  |___/
+ Artifactory Home: '/artifactory'
+
+2015-08-22 18:21:18,427 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:209) - Refreshing Artifactory: startup date [Sat Aug 22 18:21:18 UTC 2015]; root of context hierarchy
+2015-08-22 18:21:26,531 [art-init] [INFO ] (o.a.s.d.DbServiceImpl:184) - Database: Apache Derby 10.9.1.0 - (1344872). Driver: Apache Derby Embedded JDBC Driver 10.9.1.0 - (1344872)
+2015-08-22 18:21:26,531 [art-init] [INFO ] (o.a.s.d.DbServiceImpl:186) - Connection URL: jdbc:derby:/artifactory/data/derby
+2015-08-22 18:21:26,905 [art-init] [INFO ] (o.a.s.d.DbServiceImpl:96) - ***Creating database schema***
+2015-08-22 18:21:38,215 [art-init] [INFO ] (o.a.s.ArtifactorySchedulerFactoryBean:647) - Starting Quartz Scheduler now
+2015-08-22 18:21:38,253 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:216) - Artifactory context starting up...
+2015-08-22 18:21:38,365 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.storage.db.DbService
+2015-08-22 18:21:38,379 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.interceptor.StorageInterceptors
+2015-08-22 18:21:38,380 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.config.ConfigurationChangesInterceptors
+2015-08-22 18:21:38,382 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.config.InternalCentralConfigService
+2015-08-22 18:21:38,411 [art-init] [INFO ] (o.a.c.CentralConfigServiceImpl:134) - Loading bootstrap configuration (artifactory home dir is /artifactory).
+2015-08-22 18:21:39,182 [art-init] [INFO ] (o.a.c.CentralConfigServiceImpl:336) - Saving new configuration in storage...
+2015-08-22 18:21:39,424 [art-init] [INFO ] (o.a.c.CentralConfigServiceImpl:339) - New configuration saved.
+2015-08-22 18:21:39,459 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.state.model.ArtifactoryStateManager
+2015-08-22 18:21:39,554 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.schedule.TaskService
+2015-08-22 18:21:39,557 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.service.InternalRepositoryService
+2015-08-22 18:21:40,791 [art-init] [INFO ] (o.a.i.InfoWriter    :86) - 
+
+ SYSTEM INFORMATION DUMP
+ =======================
+
+ User Info
+ ========================
+   user.dir                                                              | /artifactory
+   user.home                                                             | /root
+   user.language                                                         | en
+   user.name                                                             | root
+   user.timezone                                                         | Etc/UTC
+
+ Host Info
+ ========================
+   Available Processors                                                  | 1
+   Heap Memory Usage-Commited                                            | 67223552
+   Heap Memory Usage-Init                                                | 16273088
+   Heap Memory Usage-Max                                                 | 504823808
+   Heap Memory Usage-Used                                                | 39958216
+   Non-Heap Memory Usage-Commited                                        | 53936128
+   Non-Heap Memory Usage-Init                                            | 24313856
+   Non-Heap Memory Usage-Max                                             | 224395264
+   Non-Heap Memory Usage-Used                                            | 53763464
+   os.arch                                                               | amd64
+   os.name                                                               | Linux
+   os.version                                                            | 3.19.0-25-generic
+
+ Artifactory Info
+ ========================
+   artifactory.runMode.test                                              | false
+   artifactory.runMode.qa                                                | false
+   artifactory.runMode.dev                                               | false
+   artifactory.runMode.devHa                                             | false
+   artifactory.version                                                   | 3.9.2
+   artifactory.revision                                                  | 30204
+   artifactory.timestamp                                                 | 1436110172976
+   artifactory.servlet.supportUrlSessionTracking                         | false
+   artifactory.addons.disabled                                           | 
+   artifactory.addons.info.url                                           | http://service.jfrog.org/artifactory/addons/info/%s
+   artifactory.async.corePoolSize                                        | 4
+   artifactory.async.poolTtlSecs                                         | 60
+   artifactory.async.poolMaxQueueSize                                    | 10000
+   artifactory.versioningQueryIntervalSecs                               | 7200
+   artifactory.logs.viewRefreshRateSecs                                  | 10
+   artifactory.locks.timeoutSecs                                         | 120
+   artifactory.locks.debugTimeouts                                       | false
+   artifactory.task.completionLockTimeoutRetries                         | 100
+   artifactory.repo.concurrentDownloadSyncTimeoutSecs                    | 900
+   artifactory.repo.downloadStatsEnabled                                 | true
+   artifactory.repo.global.disabled                                      | true
+   artifactory.fsitem.cache.idleTimeSecs                                 | 1200
+   artifactory.docker.tokens.cache.idleTimeSecs                          | 240
+   artifactory.cacheFS.sync.quietPeriodSecs                              | 900
+   artifactory.search.maxResults                                         | 500
+   artifactory.search.userQueryLimit                                     | 1000
+   artifactory.search.content.maxFragments                               | 500
+   artifactory.search.content.maxFragmentsSize                           | 5000
+   artifactory.search.archive.minQueryLength                             | 3
+   artifactory.search.pattern.timeoutSecs                                | 30
+   artifactory.gc.useIndex                                               | false
+   artifactory.gc.intervalSecs                                           | 86400
+   artifactory.gc.delaySecs                                              | 7200
+   artifactory.gc.sleepBetweenNodesMillis                                | 20
+   artifactory.gc.scanStartSleepingThresholdMillis                       | 20000
+   artifactory.gc.scanSleepBetweenIterationsMillis                       | 200
+   artifactory.gc.fileScanSleepIterationMillis                           | 1000
+   artifactory.gc.fileScanSleepMillis                                    | 250
+   artifactory.gc.maxCacheEntries                                        | 10000
+   artifactory.traffic.collectionActive                                  | false
+   artifactory.security.authentication.cache.initSize                    | 100
+   artifactory.security.authentication.cache.idleTimeSecs                | 300
+   artifactory.security.userLastAccessUpdatesResolutionSecs              | 5
+   artifactory.security.authentication.encryptedPassword.surroundChars   | **
+   artifactory.security.useBase64                                        | false
+   artifactory.security.master.key                                       | ************************
+   artifactory.security.disableRememberMe                                | false
+   artifactory.mvn.central.hostPattern                                   | .maven.org
+   artifactory.mvn.central.indexerMaxQueryIntervalSecs                   | 86400
+   artifactory.mvn.dynamicMetadata.cacheRetentionSecs                    | 10
+   artifactory.mvn.metadata.version3.enabled                             | true
+   artifactory.mvn.custom.types                                          | tar.gz,tar.bz2
+   artifactory.request.disableVersionTokens                              | false
+   artifactory.request.searchLatestReleaseByDateCreated                  | false
+   artifactory.build.maxFoldersToScanForDeletionWarnings                 | 2
+   artifactory.build.checksum.cache.idleTimeSecs                         | 300
+   artifactory.updates.refreshIntervalSecs                               | 14400
+   artifactory.updates.url                                               | http://service.jfrog.org/artifactory/updates
+   artifactory.artifactoryRequestsToGlobalCanRetrieveRemoteArtifacts     | false
+   artifactory.ui.syntaxColoringMaxTextSizeBytes                         | 512000
+   artifactory.plugin.scripts.refreshIntervalSecs                        | 0
+   artifactory.plugin.aol.support                                        | false
+   artifactory.aol.dedicated.server                                      | false
+   artifactory.file.roller.maxFileToRetain                               | 10
+   artifactory.backup.fileExportSleepIterationMillis                     | 2000
+   artifactory.backup.fileExportSleepMillis                              | 250
+   artifactory.http.acceptEncoding.gzip                                  | true
+   artifactory.http.useExpectContinue                                    | false
+   artifactory.http.forceForbiddenResponse                               | false
+   artifactory.http.enableCookieManagement                               | false
+   artifactory.filtering.resourceSizeKb                                  | 64
+   artifactory.repo.remote.checkForExistingResourceOnRequest             | true
+   artifactory.version.query.enabled                                     | true
+   artifactory.response.disableContentDispositionFilename                | false
+   artifactory.yum.calculationRequest.aggregationTimeWindowSecs          | 60
+   artifactory.debian.calculationRequest.aggregationTimeWindowSecs       | 60
+   artifactory.yum.calculationRequest.aggregationCycleSecs               | 60
+   artifactory.debian.calculationRequest.aggregationCycleSecs            | 60
+   artifactory.archive.licenseFile.names                                 | license,LICENSE,license.txt,LICENSE.txt,LICENSE.TXT
+   artifactory.ui.search.maxRowsPerPage                                  | 20
+   artifactory.replication.checksumDeploy.minSizeKb                      | 10
+   artifactory.replication.consumer.queueSize                            | 1
+   artifactory.replication.local.iteration.sleepThresholdMillis          | 1000
+   artifactory.replication.local.iteration.sleepMillis                   | 100
+   artifactory.replication.event.queue.size                              | 50000
+   artifactory.request.explodedArchiveExtensions                         | zip,tar,tar.gz,tgz
+   artifactory.bintray.jcenter.url                                       | http://jcenter.bintray.com
+   artifactory.bintray.url                                               | https://bintray.com
+   artifactory.bintray.api.url                                           | https://api.bintray.com
+   artifactory.bintray.ui.hideUploads                                    | false
+   artifactory.bintray.ui.hideInfo                                       | false
+   artifactory.bintray.ui.hideRemoteSearch                               | false
+   artifactory.bintray.client.threadPool.size                            | 5
+   artifactory.bintray.client.requestTimeoutMS                           | 150000
+   artifactory.bintray.client.signRequestTimeoutMS                       | 90000
+   artifactory.useUserNameAutoCompleteOnLogin                            | on
+   artifactory.ui.hideEncryptedPassword                                  | *****
+   artifactory.stats.flushIntervalSecs                                   | 30
+   artifactory.stats.flushTimeoutSecs                                    | 120
+   artifactory.integrationCleanup.intervalSecs                           | 300
+   artifactory.integrationCleanup.quietPeriodSecs                        | 60
+   artifactory.folderPruning.intervalSecs                                | 300
+   artifactory.folderPruning.quietPeriodSecs                             | 60
+   artifactory.repo.virtualCacheCleanup.maxAgeHours                      | 168
+   artifactory.repo.virtualCacheCleanup.pattern                          | *.pom
+   artifactory.security.authentication.password.salt                     | ****************
+   artifactory.db.idGenerator.fetch.amount                               | 2000
+   artifactory.db.idGenerator.max.update.retries                         | 50
+   artifactory.gems.localIndexTaskIntervalSecs                           | 30
+   artifactory.gems.virtualIndexTaskIntervalSecs                         | 300
+   artifactory.gems.gemsIndexTaskQueueLimit                              | 20000
+   artifactory.gems.gemsAfterRepoInitHack                                | true
+   artifactory.security.authentication.crowd.group.startIndex            | 0
+   artifactory.security.authentication.crowd.group.maxResults            | 9999
+   artifactory.ui.hideChecksums                                          | false
+   artifactory.archive.indexer.intervalSecs                              | 60
+   artifactory.nuget.inMemoryRemoteCaches                                | true
+   artifactory.nuget.forceAuthentication                                 | false
+   artifactory.ha.heartbeat.intervalSecs                                 | 5
+   artifactory.ha.heartbeat.staleSecs                                    | 30
+   artifactory.ha.membersIntroduction.intervalSecs                       | 30
+   artifactory.ha.membersIntroduction.staleSecs                          | 30
+   artifactory.npm.index.quietPeriodSecs                                 | 60
+   artifactory.npm.index.cycleSecs                                       | 60
+   artifactory.import.max.parallelRepos                                  | 0
+   artifactory.debian.distribution.path                                  | dists
+   artifactory.debian.index.quietPeriodSecs                              | 60
+   artifactory.debian.index.cycleSecs                                    | 2
+   artifactory.debian.default.architectures                              | i386,amd64
+   artifactory.pypi.index.quietPeriodSecs                                | 60
+   artifactory.pypi.index.sleepMilliSecs                                 | 60
+   artifactory.docker.cleanup.maxAgeMillis                               | 86400000
+   artifactory.http.range.support                                        | true
+   derby.storage.pageCacheSize                                           | 500
+   derby.module.mgmt.jmx                                                 | org.apache.derby.impl.services.jmxnone.NoManagementService
+   derby.language.logStatementText                                       | false
+   derby.stream.error.logSeverityLevel                                   | 0
+
+ Java System Info
+ ========================
+   java.class.version                                                    | 51.0
+   java.home                                                             | /usr/lib/jvm/java-7-openjdk-amd64/jre
+   java.io.tmpdir                                                        | /usr/local/tomcat/temp
+   java.runtime.name                                                     | OpenJDK Runtime Environment
+   java.runtime.version                                                  | 1.7.0_79-b14
+   java.specification.name                                               | Java Platform API Specification
+   java.specification.vendor                                             | Oracle Corporation
+   java.specification.version                                            | 1.7
+   java.vendor                                                           | Oracle Corporation
+   java.vendor.url                                                       | http://java.oracle.com/
+   java.vendor.url.bug                                                   | http://bugreport.sun.com/bugreport/
+   java.version                                                          | 1.7.0_79
+   java.vm.info                                                          | mixed mode
+   java.vm.name                                                          | OpenJDK 64-Bit Server VM
+   java.vm.specification.name                                            | Java Virtual Machine Specification
+   java.vm.specification.vendor                                          | Oracle Corporation
+   java.vm.specification.version                                         | 1.7
+   java.vm.vendor                                                        | Oracle Corporation
+   java.vm.version                                                       | 24.79-b02
+   sun.arch.data.model                                                   | 64
+   sun.boot.library.path                                                 | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64
+   sun.cpu.endian                                                        | little
+   sun.cpu.isalist                                                       | 
+   sun.io.unicode.encoding                                               | UnicodeLittle
+   sun.java.launcher                                                     | SUN_STANDARD
+   sun.jnu.encoding                                                      | UTF-8
+   sun.management.compiler                                               | HotSpot 64-Bit Tiered Compilers
+   sun.os.patch.level                                                    | unknown
+   JVM Input arguments                                                   | -Djava.util.logging.config.file=/usr/local/tomcat/conf/logging.properties
+                                                                         | -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+                                                                         | -Djava.endorsed.dirs=/usr/local/tomcat/endorsed
+                                                                         | -Dcatalina.base=/usr/local/tomcat
+                                                                         | -Dcatalina.home=/usr/local/tomcat
+                                                                         | -Djava.io.tmpdir=/usr/local/tomcat/temp
+
+ Java Class Path Info
+ ========================
+   sun.boot.class.path                                                   | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/resources.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/sunrsasign.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jsse.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jce.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/charsets.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rhino.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/jfr.jar
+                                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/classes
+   java.library.path                                                     | /usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib
+   java.endorsed.dirs                                                    | /usr/local/tomcat/endorsed
+   java.ext.dirs                                                         | /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/ext:/usr/java/packages/lib/ext
+   java.class.path                                                       | /usr/local/tomcat/bin/bootstrap.jar
+                                                                         | /usr/local/tomcat/bin/tomcat-juli.jar
+
+2015-08-22 18:21:40,915 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.engine.InternalDownloadService
+2015-08-22 18:21:40,916 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.security.InternalSecurityService
+2015-08-22 18:21:41,209 [art-init] [INFO ] (o.a.s.SecurityServiceImpl:1274) - Creating the default super user 'admin', since no admin user exists!
+2015-08-22 18:21:41,270 [art-init] [INFO ] (o.a.s.SecurityServiceImpl:1303) - Creating the default anonymous user, since it does not exists!
+2015-08-22 18:21:41,538 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.security.interceptor.SecurityConfigurationChangesInterceptors
+2015-08-22 18:21:41,540 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.storage.InternalStorageService
+2015-08-22 18:21:41,564 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.security.ldap.InternalLdapAuthenticator
+2015-08-22 18:21:41,567 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.cleanup.InternalIntegrationCleanupService
+2015-08-22 18:21:41,572 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.backup.InternalBackupService
+2015-08-22 18:21:41,582 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.build.InternalBuildService
+2015-08-22 18:21:41,597 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.cleanup.InternalVirtualCacheCleanupService
+2015-08-22 18:21:41,611 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.storage.db.servers.service.ArtifactoryHeartbeatService
+2015-08-22 18:21:41,614 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.search.InternalSearchService
+2015-08-22 18:21:41,619 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.cache.expirable.CacheExpiry
+2015-08-22 18:21:41,620 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.cleanup.InternalFolderPruningService
+2015-08-22 18:21:41,621 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.interceptor.ImportInterceptors
+2015-08-22 18:21:41,622 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.maven.index.InternalMavenIndexerService
+2015-08-22 18:21:41,632 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.traffic.InternalTrafficService
+2015-08-22 18:21:41,634 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.cleanup.InternalArtifactCleanupService
+2015-08-22 18:21:41,636 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.md.MetadataDefinitionService
+2015-08-22 18:21:41,674 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:221) - Initializing org.artifactory.repo.interceptor.StorageAggregationInterceptors
+2015-08-22 18:21:41,767 [art-init] [INFO ] (o.a.s.ArtifactoryApplicationContext:406) - Artifactory application context is ready.
+2015-08-22 18:21:41,769 [art-init] [INFO ] (o.a.w.s.ArtifactoryContextConfigListener:225) - 
+###########################################################
+### Artifactory successfully started (23.745 seconds)   ###
+###########################################################
+
+2015-08-22 18:37:43,329 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom 3.83 KB 
+2015-08-22 18:37:43,753 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.pom 3.83 KB at 9.96 KB/sec
+2015-08-22 18:37:44,226 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom 12.73 KB 
+2015-08-22 18:37:44,365 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-plugins/22/maven-plugins-22.pom 12.73 KB at 92.34 KB/sec
+2015-08-22 18:37:44,730 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/21/maven-parent-21.pom 25.74 KB 
+2015-08-22 18:37:44,840 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/21/maven-parent-21.pom 25.74 KB at 237.04 KB/sec
+2015-08-22 18:37:45,150 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/10/apache-10.pom 14.45 KB 
+2015-08-22 18:37:45,208 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/10/apache-10.pom 14.45 KB at 252.83 KB/sec
+2015-08-22 18:37:45,525 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar 24.06 KB 
+2015-08-22 18:37:45,604 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar 24.06 KB at 307.70 KB/sec
+2015-08-22 18:37:45,870 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom 7.92 KB 
+2015-08-22 18:37:45,910 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.pom 7.92 KB at 203.51 KB/sec
+2015-08-22 18:37:46,232 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom 8.98 KB 
+2015-08-22 18:37:46,312 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-plugins/23/maven-plugins-23.pom 8.98 KB at 123.03 KB/sec
+2015-08-22 18:37:46,646 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/22/maven-parent-22.pom 29.05 KB 
+2015-08-22 18:37:46,710 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/22/maven-parent-22.pom 29.05 KB at 461.22 KB/sec
+2015-08-22 18:37:47,037 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/11/apache-11.pom 14.46 KB 
+2015-08-22 18:37:47,069 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/11/apache-11.pom 14.46 KB at 468.75 KB/sec
+2015-08-22 18:37:47,409 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar 28.83 KB 
+2015-08-22 18:37:47,462 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar 28.83 KB at 543.88 KB/sec
+2015-08-22 18:37:47,729 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom 9.97 KB 
+2015-08-22 18:37:47,762 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.pom 9.97 KB at 311.33 KB/sec
+2015-08-22 18:37:47,995 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-plugins/24/maven-plugins-24.pom 10.55 KB 
+2015-08-22 18:37:48,018 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-plugins/24/maven-plugins-24.pom 10.55 KB at 483.20 KB/sec
+2015-08-22 18:37:48,278 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/23/maven-parent-23.pom 31.82 KB 
+2015-08-22 18:37:48,338 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/23/maven-parent-23.pom 31.82 KB at 528.78 KB/sec
+2015-08-22 18:37:48,582 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/13/apache-13.pom 13.65 KB 
+2015-08-22 18:37:48,658 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/13/apache-13.pom 13.65 KB at 183.36 KB/sec
+2015-08-22 18:37:48,954 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar 41.94 KB 
+2015-08-22 18:37:49,050 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar 41.94 KB at 438.36 KB/sec
+2015-08-22 18:37:49,349 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom 10.23 KB 
+2015-08-22 18:37:49,422 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.pom 10.23 KB at 141.48 KB/sec
+2015-08-22 18:37:49,751 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom 13.47 KB 
+2015-08-22 18:37:49,797 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/surefire/2.12.4/surefire-2.12.4.pom 13.47 KB at 299.45 KB/sec
+2015-08-22 18:37:50,098 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar 29.75 KB 
+2015-08-22 18:37:50,162 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar 29.75 KB at 471.76 KB/sec
+2015-08-22 18:37:50,431 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.pom 6.32 KB 
+2015-08-22 18:37:50,501 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.pom 6.32 KB at 92.31 KB/sec
+2015-08-22 18:37:50,803 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar 76.81 KB 
+2015-08-22 18:37:50,907 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar 76.81 KB at 742.16 KB/sec
+2015-08-22 18:37:51,290 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.pom 6.23 KB 
+2015-08-22 18:37:51,437 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.pom 6.23 KB at 42.37 KB/sec
+2015-08-22 18:37:51,784 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.jar 26.32 KB 
+2015-08-22 18:37:51,854 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.jar 26.32 KB at 381.62 KB/sec
+2015-08-22 18:37:52,143 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/junit/junit/3.8.1/junit-3.8.1.pom 998 bytes 
+2015-08-22 18:37:52,189 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/junit/junit/3.8.1/junit-3.8.1.pom 998 bytes at 21.63 KB/sec
+2015-08-22 18:37:52,434 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.pom 2.43 KB 
+2015-08-22 18:37:52,464 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.pom 2.43 KB at 82.21 KB/sec
+2015-08-22 18:37:52,674 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.pom 18.76 KB 
+2015-08-22 18:37:52,747 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.pom 18.76 KB at 262.13 KB/sec
+2015-08-22 18:37:52,960 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/commons/commons-parent/34/commons-parent-34.pom 54.63 KB 
+2015-08-22 18:37:53,065 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/commons/commons-parent/34/commons-parent-34.pom 54.63 KB at 523.17 KB/sec
+2015-08-22 18:37:53,330 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.pom 11.75 KB 
+2015-08-22 18:37:53,356 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.pom 11.75 KB at 455.71 KB/sec
+2015-08-22 18:37:53,622 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.pom 2.44 KB 
+2015-08-22 18:37:53,650 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.pom 2.44 KB at 88.46 KB/sec
+2015-08-22 18:37:53,853 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.pom 4.91 KB 
+2015-08-22 18:37:53,880 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.pom 4.91 KB at 197.07 KB/sec
+2015-08-22 18:37:54,148 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.pom 2.80 KB 
+2015-08-22 18:37:54,166 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.pom 2.80 KB at 159.21 KB/sec
+2015-08-22 18:37:54,414 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0.pom 363 bytes 
+2015-08-22 18:37:54,468 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0.pom 363 bytes at 6.53 KB/sec
+2015-08-22 18:37:54,793 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.pom 1.68 KB 
+2015-08-22 18:37:54,871 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.pom 1.68 KB at 21.84 KB/sec
+2015-08-22 18:37:55,205 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.pom 7.56 KB 
+2015-08-22 18:37:55,225 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.pom 7.56 KB at 391.77 KB/sec
+2015-08-22 18:37:55,457 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-orm/4.2.0.RELEASE/spring-orm-4.2.0.RELEASE.pom 7.15 KB 
+2015-08-22 18:37:55,492 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-orm/4.2.0.RELEASE/spring-orm-4.2.0.RELEASE.pom 7.15 KB at 212.67 KB/sec
+2015-08-22 18:37:55,705 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-jdbc/4.2.0.RELEASE/spring-jdbc-4.2.0.RELEASE.pom 3.45 KB 
+2015-08-22 18:37:55,769 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-jdbc/4.2.0.RELEASE/spring-jdbc-4.2.0.RELEASE.pom 3.45 KB at 54.66 KB/sec
+2015-08-22 18:37:55,996 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.pom 3.29 KB 
+2015-08-22 18:37:56,022 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.pom 3.29 KB at 130.90 KB/sec
+2015-08-22 18:37:56,245 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-entitymanager/3.6.9.Final/hibernate-entitymanager-3.6.9.Final.pom 9.88 KB 
+2015-08-22 18:37:56,329 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-entitymanager/3.6.9.Final/hibernate-entitymanager-3.6.9.Final.pom 9.88 KB at 119.53 KB/sec
+2015-08-22 18:37:56,606 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-parent/3.6.9.Final/hibernate-parent-3.6.9.Final.pom 44.55 KB 
+2015-08-22 18:37:56,698 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-parent/3.6.9.Final/hibernate-parent-3.6.9.Final.pom 44.55 KB at 491.37 KB/sec
+2015-08-22 18:37:57,009 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-core/3.6.9.Final/hibernate-core-3.6.9.Final.pom 10.50 KB 
+2015-08-22 18:37:57,025 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-core/3.6.9.Final/hibernate-core-3.6.9.Final.pom 10.50 KB at 650.92 KB/sec
+2015-08-22 18:37:57,240 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/antlr/antlr/2.7.6/antlr-2.7.6.pom 230 bytes 
+2015-08-22 18:37:57,263 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/antlr/antlr/2.7.6/antlr-2.7.6.pom 230 bytes at 10.27 KB/sec
+2015-08-22 18:37:57,528 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-collections/commons-collections/3.1/commons-collections-3.1.pom 5.94 KB 
+2015-08-22 18:37:57,554 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-collections/commons-collections/3.1/commons-collections-3.1.pom 5.94 KB at 236.52 KB/sec
+2015-08-22 18:37:57,808 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/dom4j/dom4j/1.6.1/dom4j-1.6.1.pom 6.61 KB 
+2015-08-22 18:37:57,842 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/dom4j/dom4j/1.6.1/dom4j-1.6.1.pom 6.61 KB at 195.98 KB/sec
+2015-08-22 18:37:58,254 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.pom 6.40 KB 
+2015-08-22 18:37:58,275 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.pom 6.40 KB at 315.21 KB/sec
+2015-08-22 18:37:58,508 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.pom 2.91 KB 
+2015-08-22 18:37:58,549 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-api/1.5.8/slf4j-api-1.5.8.pom 2.91 KB at 72.82 KB/sec
+2015-08-22 18:37:58,762 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.5.8/slf4j-parent-1.5.8.pom 7.90 KB 
+2015-08-22 18:37:58,784 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.5.8/slf4j-parent-1.5.8.pom 7.90 KB at 366.60 KB/sec
+2015-08-22 18:37:58,992 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.pom 6.94 KB 
+2015-08-22 18:37:59,015 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.pom 6.94 KB at 342.60 KB/sec
+2015-08-22 18:37:59,236 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/javax/transaction/jta/1.1/jta-1.1.pom 598 bytes 
+2015-08-22 18:37:59,277 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/javax/transaction/jta/1.1/jta-1.1.pom 598 bytes at 14.46 KB/sec
+2015-08-22 18:37:59,515 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom 2.92 KB 
+2015-08-22 18:37:59,535 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom 2.92 KB at 146.69 KB/sec
+2015-08-22 18:37:59,722 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.6.1/slf4j-parent-1.6.1.pom 9.10 KB 
+2015-08-22 18:37:59,738 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.6.1/slf4j-parent-1.6.1.pom 9.10 KB at 582.89 KB/sec
+2015-08-22 18:37:59,978 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/cglib/cglib/2.2/cglib-2.2.pom 1013 bytes 
+2015-08-22 18:38:00,008 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/cglib/cglib/2.2/cglib-2.2.pom 1013 bytes at 34.21 KB/sec
+2015-08-22 18:38:00,211 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/asm/asm/3.1/asm-3.1.pom 278 bytes 
+2015-08-22 18:38:00,230 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/asm/asm/3.1/asm-3.1.pom 278 bytes at 14.51 KB/sec
+2015-08-22 18:38:00,406 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/asm/asm-parent/3.1/asm-parent-3.1.pom 4.06 KB 
+2015-08-22 18:38:00,423 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/asm/asm-parent/3.1/asm-parent-3.1.pom 4.06 KB at 245.88 KB/sec
+2015-08-22 18:38:00,681 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/javassist/javassist/3.12.0.GA/javassist-3.12.0.GA.pom 5.71 KB 
+2015-08-22 18:38:00,699 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/javassist/javassist/3.12.0.GA/javassist-3.12.0.GA.pom 5.71 KB at 327.98 KB/sec
+2015-08-22 18:38:00,975 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.pom 1.23 KB 
+2015-08-22 18:38:01,006 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.pom 1.23 KB at 40.19 KB/sec
+2015-08-22 18:38:01,198 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.pom 10.87 KB 
+2015-08-22 18:38:01,219 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.pom 10.87 KB at 517.42 KB/sec
+2015-08-22 18:38:01,451 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/commons/commons-parent/12/commons-parent-12.pom 26.29 KB 
+2015-08-22 18:38:01,905 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/commons/commons-parent/12/commons-parent-12.pom 26.29 KB at 57.96 KB/sec
+2015-08-22 18:38:02,225 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/4/apache-4.pom 4.39 KB 
+2015-08-22 18:38:02,265 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/4/apache-4.pom 4.39 KB at 112.18 KB/sec
+2015-08-22 18:38:02,526 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.pom 11.22 KB 
+2015-08-22 18:38:02,552 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.pom 11.22 KB at 443.32 KB/sec
+2015-08-22 18:38:02,778 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.pom 5.25 KB 
+2015-08-22 18:38:02,812 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.pom 5.25 KB at 158.15 KB/sec
+2015-08-22 18:38:03,043 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/oss-parent/11/oss-parent-11.pom 22.64 KB 
+2015-08-22 18:38:03,138 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/oss-parent/11/oss-parent-11.pom 22.64 KB at 241.43 KB/sec
+2015-08-22 18:38:03,405 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.pom 1.23 KB 
+2015-08-22 18:38:03,441 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.pom 1.23 KB at 34.98 KB/sec
+2015-08-22 18:38:03,665 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/oss-parent/10/oss-parent-10.pom 22.74 KB 
+2015-08-22 18:38:03,723 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/oss-parent/10/oss-parent-10.pom 22.74 KB at 397.39 KB/sec
+2015-08-22 18:38:04,115 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.pom 5.84 KB 
+2015-08-22 18:38:04,153 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.pom 5.84 KB at 165.06 KB/sec
+2015-08-22 18:38:04,552 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom 2.63 KB 
+2015-08-22 18:38:04,605 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.pom 2.63 KB at 50.59 KB/sec
+2015-08-22 18:38:04,916 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.7.5/slf4j-parent-1.7.5.pom 11.53 KB 
+2015-08-22 18:38:04,939 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.7.5/slf4j-parent-1.7.5.pom 11.53 KB at 505.51 KB/sec
+2015-08-22 18:38:05,151 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.pom 11.59 KB 
+2015-08-22 18:38:05,177 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.pom 11.59 KB at 466.68 KB/sec
+2015-08-22 18:38:05,442 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/ch/qos/logback/logback-parent/1.0.13/logback-parent-1.0.13.pom 14.38 KB 
+2015-08-22 18:38:05,480 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/ch/qos/logback/logback-parent/1.0.13/logback-parent-1.0.13.pom 14.38 KB at 394.27 KB/sec
+2015-08-22 18:38:05,698 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.pom 4.90 KB 
+2015-08-22 18:38:05,726 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.pom 4.90 KB at 178.65 KB/sec
+2015-08-22 18:38:06,042 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/junit/junit/3.8.1/junit-3.8.1.jar 118.23 KB 
+2015-08-22 18:38:06,156 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.jar 60.38 KB 
+2015-08-22 18:38:06,201 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/junit/junit/3.8.1/junit-3.8.1.jar 118.23 KB at 746.64 KB/sec
+2015-08-22 18:38:06,284 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-logging/commons-logging/1.2/commons-logging-1.2.jar 60.38 KB at 473.72 KB/sec
+2015-08-22 18:38:06,421 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.jar 845.12 KB 
+2015-08-22 18:38:06,538 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.jar 1.00 MB 
+2015-08-22 18:38:06,577 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.jar 712.45 KB 
+2015-08-22 18:38:06,661 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.jar 1.03 MB 
+2015-08-22 18:38:06,785 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.jar 355.44 KB 
+2015-08-22 18:38:08,061 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.jar 712.45 KB at 480.94 KB/sec
+2015-08-22 18:38:08,166 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.jar 355.44 KB at 257.60 KB/sec
+2015-08-22 18:38:08,250 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0.jar 4.36 KB 
+2015-08-22 18:38:08,268 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/aopalliance/aopalliance/1.0/aopalliance-1.0.jar 4.36 KB at 247.98 KB/sec
+2015-08-22 18:38:08,552 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.jar 256.24 KB 
+2015-08-22 18:38:08,735 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar 747.93 KB 
+2015-08-22 18:38:08,778 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.jar 1.03 MB at 500.55 KB/sec
+2015-08-22 18:38:09,144 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.jar 1.00 MB at 394.43 KB/sec
+2015-08-22 18:38:09,174 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.jar 845.12 KB at 307.13 KB/sec
+2015-08-22 18:38:09,235 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-orm/4.2.0.RELEASE/spring-orm-4.2.0.RELEASE.jar 454.68 KB 
+2015-08-22 18:38:09,342 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.jar 256.24 KB at 324.32 KB/sec
+2015-08-22 18:38:09,587 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-jdbc/4.2.0.RELEASE/spring-jdbc-4.2.0.RELEASE.jar 411.76 KB 
+2015-08-22 18:38:09,619 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar 256.80 KB 
+2015-08-22 18:38:09,794 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-entitymanager/3.6.9.Final/hibernate-entitymanager-3.6.9.Final.jar 416.32 KB 
+2015-08-22 18:38:10,302 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-orm/4.2.0.RELEASE/spring-orm-4.2.0.RELEASE.jar 454.68 KB at 426.06 KB/sec
+2015-08-22 18:38:10,353 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar 747.93 KB at 462.72 KB/sec
+2015-08-22 18:38:10,409 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar 256.80 KB at 325.29 KB/sec
+2015-08-22 18:38:10,486 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/springframework/spring-jdbc/4.2.0.RELEASE/spring-jdbc-4.2.0.RELEASE.jar 411.76 KB at 458.48 KB/sec
+2015-08-22 18:38:10,492 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/asm/asm/3.1/asm-3.1.jar 42.02 KB 
+2015-08-22 18:38:10,576 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/asm/asm/3.1/asm-3.1.jar 42.02 KB at 533.24 KB/sec
+2015-08-22 18:38:10,676 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar 100.25 KB 
+2015-08-22 18:38:10,766 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/cglib/cglib/2.2/cglib-2.2.jar 272.15 KB 
+2015-08-22 18:38:10,807 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/javassist/javassist/3.12.0.GA/javassist-3.12.0.GA.jar 618.47 KB 
+2015-08-22 18:38:10,822 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar 100.25 KB at 690.51 KB/sec
+2015-08-22 18:38:10,968 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-entitymanager/3.6.9.Final/hibernate-entitymanager-3.6.9.Final.jar 416.32 KB at 354.79 KB/sec
+2015-08-22 18:38:11,133 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-core/3.6.9.Final/hibernate-core-3.6.9.Final.jar 2.98 MB 
+2015-08-22 18:38:11,285 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/cglib/cglib/2.2/cglib-2.2.jar 272.15 KB at 524.58 KB/sec
+2015-08-22 18:38:11,297 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/antlr/antlr/2.7.6/antlr-2.7.6.jar 433.04 KB 
+2015-08-22 18:38:11,432 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-collections/commons-collections/3.1/commons-collections-3.1.jar 546.26 KB 
+2015-08-22 18:38:11,616 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar 306.54 KB 
+2015-08-22 18:38:11,997 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/javassist/javassist/3.12.0.GA/javassist-3.12.0.GA.jar 618.47 KB at 520.08 KB/sec
+2015-08-22 18:38:12,208 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar 306.54 KB at 518.75 KB/sec
+2015-08-22 18:38:12,210 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar 69.61 KB 
+2015-08-22 18:38:12,378 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar 69.61 KB at 421.54 KB/sec
+2015-08-22 18:38:12,444 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/antlr/antlr/2.7.6/antlr-2.7.6.jar 433.04 KB at 377.63 KB/sec
+2015-08-22 18:38:12,460 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/javax/transaction/jta/1.1/jta-1.1.jar 14.72 KB 
+2015-08-22 18:38:12,486 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-collections/commons-collections/3.1/commons-collections-3.1.jar 546.26 KB at 518.50 KB/sec
+2015-08-22 18:38:12,508 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/javax/transaction/jta/1.1/jta-1.1.jar 14.72 KB at 311.03 KB/sec
+2015-08-22 18:38:12,603 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar 156.76 KB 
+2015-08-22 18:38:12,678 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar 93.97 KB 
+2015-08-22 18:38:12,741 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar 707.24 KB 
+2015-08-22 18:38:12,811 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar 156.76 KB at 756.62 KB/sec
+2015-08-22 18:38:12,835 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar 93.97 KB at 599.38 KB/sec
+2015-08-22 18:38:12,855 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar 845.54 KB 
+2015-08-22 18:38:13,030 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.jar 188.18 KB 
+2015-08-22 18:38:13,202 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar 32.70 KB 
+2015-08-22 18:38:13,255 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar 32.70 KB at 614.75 KB/sec
+2015-08-22 18:38:13,415 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar 25.47 KB 
+2015-08-22 18:38:13,436 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar 25.47 KB at 1198.89 KB/sec
+2015-08-22 18:38:13,492 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.jar 188.18 KB at 407.90 KB/sec
+2015-08-22 18:38:13,821 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar 258.40 KB 
+2015-08-22 18:38:13,870 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar 409.05 KB 
+2015-08-22 18:38:14,223 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar 707.24 KB at 477.37 KB/sec
+2015-08-22 18:38:14,556 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar 258.40 KB at 351.98 KB/sec
+2015-08-22 18:38:14,624 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar 409.05 KB at 543.18 KB/sec
+2015-08-22 18:38:14,909 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar 845.54 KB at 411.89 KB/sec
+2015-08-22 18:38:17,804 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/hibernate/hibernate-core/3.6.9.Final/hibernate-core-3.6.9.Final.jar 2.98 MB at 456.72 KB/sec
+2015-08-22 18:38:18,273 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.pom 1.42 KB 
+2015-08-22 18:38:18,306 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.pom 1.42 KB at 45.29 KB/sec
+2015-08-22 18:38:18,549 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven/2.0.6/maven-2.0.6.pom 8.83 KB 
+2015-08-22 18:38:18,632 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven/2.0.6/maven-2.0.6.pom 8.83 KB at 106.66 KB/sec
+2015-08-22 18:38:18,894 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/5/maven-parent-5.pom 14.88 KB 
+2015-08-22 18:38:18,974 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/5/maven-parent-5.pom 14.88 KB at 191.39 KB/sec
+2015-08-22 18:38:19,162 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/3/apache-3.pom 3.35 KB 
+2015-08-22 18:38:19,211 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/3/apache-3.pom 3.35 KB at 69.28 KB/sec
+2015-08-22 18:38:19,501 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.pom 3.97 KB 
+2015-08-22 18:38:19,555 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.pom 3.97 KB at 75.15 KB/sec
+2015-08-22 18:38:19,800 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/spice/spice-parent/16/spice-parent-16.pom 8.16 KB 
+2015-08-22 18:38:19,856 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/spice/spice-parent/16/spice-parent-16.pom 8.16 KB at 148.60 KB/sec
+2015-08-22 18:38:20,083 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/forge/forge-parent/5/forge-parent-5.pom 8.17 KB 
+2015-08-22 18:38:20,133 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/forge/forge-parent/5/forge-parent-5.pom 8.17 KB at 166.63 KB/sec
+2015-08-22 18:38:20,352 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar 12.56 KB 
+2015-08-22 18:38:20,396 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar 12.56 KB at 289.39 KB/sec
+2015-08-22 18:38:20,662 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar 220.77 KB 
+2015-08-22 18:38:21,207 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar 220.77 KB at 405.24 KB/sec
+2015-08-22 18:38:22,023 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.pom 2.58 KB 
+2015-08-22 18:38:22,063 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.pom 2.58 KB at 64.64 KB/sec
+2015-08-22 18:38:22,338 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.pom 1.95 KB 
+2015-08-22 18:38:22,412 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.pom 1.95 KB at 26.79 KB/sec
+2015-08-22 18:38:22,698 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.pom 2.98 KB 
+2015-08-22 18:38:22,744 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.pom 2.98 KB at 65.73 KB/sec
+2015-08-22 18:38:22,982 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.4.1/plexus-utils-1.4.1.pom 1.86 KB 
+2015-08-22 18:38:23,041 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.4.1/plexus-utils-1.4.1.pom 1.86 KB at 32.07 KB/sec
+2015-08-22 18:38:23,238 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom 8.76 KB 
+2015-08-22 18:38:23,289 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.11/plexus-1.0.11.pom 8.76 KB at 177.54 KB/sec
+2015-08-22 18:38:23,568 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.pom 3.86 KB 
+2015-08-22 18:38:23,607 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.pom 3.86 KB at 101.41 KB/sec
+2015-08-22 18:38:23,830 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-containers/1.0.3/plexus-containers-1.0.3.pom 492 bytes 
+2015-08-22 18:38:23,878 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-containers/1.0.3/plexus-containers-1.0.3.pom 492 bytes at 10.16 KB/sec
+2015-08-22 18:38:24,084 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom 5.60 KB 
+2015-08-22 18:38:24,133 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.4/plexus-1.0.4.pom 5.60 KB at 117.43 KB/sec
+2015-08-22 18:38:24,160 [http-bio-8080-exec-9] [WARN ] (o.a.r.v.i.t.PomTransformer:70) - Failed to parse pom 'Failed to build dom document': 
+2015-08-22 18:38:24,426 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom 6.70 KB 
+2015-08-22 18:38:24,513 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.0.4/plexus-utils-1.0.4.pom 6.70 KB at 77.41 KB/sec
+2015-08-22 18:38:24,768 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom 3.05 KB 
+2015-08-22 18:38:24,812 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.pom 3.05 KB at 69.13 KB/sec
+2015-08-22 18:38:25,002 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.pom 1.93 KB 
+2015-08-22 18:38:25,045 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.pom 1.93 KB at 45.07 KB/sec
+2015-08-22 18:38:25,266 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.pom 2.56 KB 
+2015-08-22 18:38:25,311 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.pom 2.56 KB at 57.33 KB/sec
+2015-08-22 18:38:25,528 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom 1.81 KB 
+2015-08-22 18:38:25,578 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.pom 1.81 KB at 36.24 KB/sec
+2015-08-22 18:38:25,798 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.pom 1.54 KB 
+2015-08-22 18:38:25,845 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.pom 1.54 KB at 33.82 KB/sec
+2015-08-22 18:38:26,079 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.pom 1.90 KB 
+2015-08-22 18:38:26,133 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.pom 1.90 KB at 35.14 KB/sec
+2015-08-22 18:38:26,411 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.pom 6.55 KB 
+2015-08-22 18:38:26,521 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.pom 6.55 KB at 59.99 KB/sec
+2015-08-22 18:38:26,768 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.pom 1.87 KB 
+2015-08-22 18:38:26,807 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.pom 1.87 KB at 48.26 KB/sec
+2015-08-22 18:38:27,023 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.pom 1.71 KB 
+2015-08-22 18:38:27,063 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.pom 1.71 KB at 43.91 KB/sec
+2015-08-22 18:38:27,280 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting/2.0.6/maven-reporting-2.0.6.pom 1.41 KB 
+2015-08-22 18:38:27,334 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting/2.0.6/maven-reporting-2.0.6.pom 1.41 KB at 26.30 KB/sec
+2015-08-22 18:38:27,531 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom 424 bytes 
+2015-08-22 18:38:27,578 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.pom 424 bytes at 9.01 KB/sec
+2015-08-22 18:38:27,844 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/doxia/doxia/1.0-alpha-7/doxia-1.0-alpha-7.pom 3.82 KB 
+2015-08-22 18:38:27,885 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/doxia/doxia/1.0-alpha-7/doxia-1.0-alpha-7.pom 3.82 KB at 95.12 KB/sec
+2015-08-22 18:38:28,106 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.pom 1.66 KB 
+2015-08-22 18:38:28,155 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.pom 1.66 KB at 34.05 KB/sec
+2015-08-22 18:38:28,380 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-cli/commons-cli/1.0/commons-cli-1.0.pom 2.06 KB 
+2015-08-22 18:38:28,445 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-cli/commons-cli/1.0/commons-cli-1.0.pom 2.06 KB at 32.78 KB/sec
+2015-08-22 18:38:28,661 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.pom 1.97 KB 
+2015-08-22 18:38:28,712 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.pom 1.97 KB at 39.46 KB/sec
+2015-08-22 18:38:28,976 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom 6.92 KB 
+2015-08-22 18:38:29,023 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.pom 6.92 KB at 149.45 KB/sec
+2015-08-22 18:38:29,278 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.pom 1.22 KB 
+2015-08-22 18:38:29,322 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.pom 1.22 KB at 28.39 KB/sec
+2015-08-22 18:38:29,547 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/classworlds/classworlds/1.1/classworlds-1.1.pom 3.25 KB 
+2015-08-22 18:38:29,601 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/classworlds/classworlds/1.1/classworlds-1.1.pom 3.25 KB at 60.52 KB/sec
+2015-08-22 18:38:29,828 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom 3.26 KB 
+2015-08-22 18:38:29,879 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.pom 3.26 KB at 64.34 KB/sec
+2015-08-22 18:38:30,098 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom 16.37 KB 
+2015-08-22 18:38:30,178 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.6/plexus-2.0.6.pom 16.37 KB at 206.87 KB/sec
+2015-08-22 18:38:30,404 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom 5.65 KB 
+2015-08-22 18:38:30,457 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.pom 5.65 KB at 109.39 KB/sec
+2015-08-22 18:38:30,674 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/17/maven-shared-components-17.pom 8.50 KB 
+2015-08-22 18:38:30,722 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/17/maven-shared-components-17.pom 8.50 KB at 178.32 KB/sec
+2015-08-22 18:38:31,072 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.pom 6.69 KB 
+2015-08-22 18:38:31,123 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.15/plexus-utils-1.5.15.pom 6.69 KB at 131.83 KB/sec
+2015-08-22 18:38:31,321 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom 11.34 KB 
+2015-08-22 18:38:31,623 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.2/plexus-2.0.2.pom 11.34 KB at 37.64 KB/sec
+2015-08-22 18:38:31,921 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.12/plexus-interpolation-1.12.pom 889 bytes 
+2015-08-22 18:38:31,967 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.12/plexus-interpolation-1.12.pom 889 bytes at 19.40 KB/sec
+2015-08-22 18:38:32,222 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.14/plexus-components-1.1.14.pom 5.71 KB 
+2015-08-22 18:38:32,289 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.14/plexus-components-1.1.14.pom 5.71 KB at 85.40 KB/sec
+2015-08-22 18:38:32,512 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.pom 2.80 KB 
+2015-08-22 18:38:32,556 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.pom 2.80 KB at 63.42 KB/sec
+2015-08-22 18:38:32,766 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/spice/spice-parent/10/spice-parent-10.pom 2.94 KB 
+2015-08-22 18:38:32,812 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/spice/spice-parent/10/spice-parent-10.pom 2.94 KB at 65.44 KB/sec
+2015-08-22 18:38:33,026 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/forge/forge-parent/3/forge-parent-3.pom 4.92 KB 
+2015-08-22 18:38:33,064 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/forge/forge-parent/3/forge-parent-3.pom 4.92 KB at 133.19 KB/sec
+2015-08-22 18:38:33,268 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom 7.87 KB 
+2015-08-22 18:38:33,308 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.8/plexus-utils-1.5.8.pom 7.87 KB at 202.19 KB/sec
+2015-08-22 18:38:33,586 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.pom 890 bytes 
+2015-08-22 18:38:33,634 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.pom 890 bytes at 18.00 KB/sec
+2015-08-22 18:38:33,982 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom 2.78 KB 
+2015-08-22 18:38:34,019 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.15/plexus-components-1.1.15.pom 2.78 KB at 75.80 KB/sec
+2015-08-22 18:38:34,251 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.3/plexus-2.0.3.pom 15.10 KB 
+2015-08-22 18:38:34,320 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.3/plexus-2.0.3.pom 15.10 KB at 222.02 KB/sec
+2015-08-22 18:38:34,563 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar 34.42 KB 
+2015-08-22 18:38:34,603 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar 148.06 KB 
+2015-08-22 18:38:34,632 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar 55.18 KB 
+2015-08-22 18:38:34,646 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar 28.24 KB 
+2015-08-22 18:38:34,652 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar 113.46 KB 
+2015-08-22 18:38:34,654 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar 34.42 KB at 381.22 KB/sec
+2015-08-22 18:38:34,790 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar 28.24 KB at 197.28 KB/sec
+2015-08-22 18:38:34,815 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar 55.18 KB at 303.56 KB/sec
+2015-08-22 18:38:34,835 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar 20.27 KB 
+2015-08-22 18:38:34,870 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar 148.06 KB at 554.57 KB/sec
+2015-08-22 18:38:34,892 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar 113.46 KB at 473.09 KB/sec
+2015-08-22 18:38:34,912 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar 20.27 KB at 266.41 KB/sec
+2015-08-22 18:38:34,976 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar 9.71 KB 
+2015-08-22 18:38:34,984 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar 5.80 KB 
+2015-08-22 18:38:35,057 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar 9.71 KB at 121.75 KB/sec
+2015-08-22 18:38:35,071 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar 23.90 KB 
+2015-08-22 18:38:35,079 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar 5.80 KB at 61.70 KB/sec
+2015-08-22 18:38:35,112 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar 13.29 KB 
+2015-08-22 18:38:35,119 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-cli/commons-cli/1.0/commons-cli-1.0.jar 29.41 KB 
+2015-08-22 18:38:35,153 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar 23.90 KB at 293.38 KB/sec
+2015-08-22 18:38:35,224 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar 13.29 KB at 119.97 KB/sec
+2015-08-22 18:38:35,227 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-cli/commons-cli/1.0/commons-cli-1.0.jar 29.41 KB at 274.68 KB/sec
+2015-08-22 18:38:35,245 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar 36.01 KB 
+2015-08-22 18:38:35,259 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar 13.09 KB 
+2015-08-22 18:38:35,326 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar 13.09 KB at 195.76 KB/sec
+2015-08-22 18:38:35,331 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar 36.01 KB at 425.41 KB/sec
+2015-08-22 18:38:35,391 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/classworlds/classworlds/1.1/classworlds-1.1.jar 36.97 KB 
+2015-08-22 18:38:35,396 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar 85.31 KB 
+2015-08-22 18:38:35,445 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar 47.95 KB 
+2015-08-22 18:38:35,479 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/classworlds/classworlds/1.1/classworlds-1.1.jar 36.97 KB at 417.80 KB/sec
+2015-08-22 18:38:35,480 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar 10.00 KB 
+2015-08-22 18:38:35,517 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar 84.37 KB 
+2015-08-22 18:38:35,579 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar 10.00 KB at 103.07 KB/sec
+2015-08-22 18:38:35,604 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar 85.31 KB at 412.79 KB/sec
+2015-08-22 18:38:35,657 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar 84.37 KB at 606.72 KB/sec
+2015-08-22 18:38:35,657 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar 47.95 KB at 232.29 KB/sec
+2015-08-22 18:38:35,689 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar 189.63 KB 
+2015-08-22 18:38:35,821 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar 42.10 KB 
+2015-08-22 18:38:35,842 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar 189.63 KB at 1244.89 KB/sec
+2015-08-22 18:38:35,853 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar 6.65 KB 
+2015-08-22 18:38:35,883 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar 59.63 KB 
+2015-08-22 18:38:35,899 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar 6.65 KB at 146.55 KB/sec
+2015-08-22 18:38:35,945 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar 42.10 KB at 341.25 KB/sec
+2015-08-22 18:38:36,042 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar 59.63 KB at 376.53 KB/sec
+2015-08-22 18:38:36,053 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar 217.94 KB 
+2015-08-22 18:38:36,289 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:antlr/antlr/2.7.6/antlr-2.7.6.jar
+2015-08-22 18:38:36,700 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar 217.94 KB at 337.00 KB/sec
+2015-08-22 18:38:37,324 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.pom 1.46 KB 
+2015-08-22 18:38:37,340 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:aopalliance/aopalliance/1.0/aopalliance-1.0.jar
+2015-08-22 18:38:37,389 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:asm/asm/3.1/asm-3.1.jar
+2015-08-22 18:38:37,420 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.pom 1.46 KB at 15.27 KB/sec
+2015-08-22 18:38:37,528 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:cglib/cglib/2.2/cglib-2.2.jar
+2015-08-22 18:38:37,762 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven/2.0.9/maven-2.0.9.pom 18.46 KB 
+2015-08-22 18:38:37,890 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven/2.0.9/maven-2.0.9.pom 18.46 KB at 144.75 KB/sec
+2015-08-22 18:38:38,144 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/8/maven-parent-8.pom 23.57 KB 
+2015-08-22 18:38:38,268 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/8/maven-parent-8.pom 23.57 KB at 190.83 KB/sec
+2015-08-22 18:38:38,320 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar
+2015-08-22 18:38:38,633 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.pom 1.58 KB 
+2015-08-22 18:38:38,664 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar
+2015-08-22 18:38:38,719 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.pom 1.58 KB at 18.53 KB/sec
+2015-08-22 18:38:39,011 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom 2.24 KB 
+2015-08-22 18:38:39,149 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.pom 2.24 KB at 16.26 KB/sec
+2015-08-22 18:38:39,369 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.pom 7.60 KB 
+2015-08-22 18:38:39,374 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:classworlds/classworlds/1.1/classworlds-1.1.jar
+2015-08-22 18:38:39,491 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar
+2015-08-22 18:38:39,537 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.pom 7.60 KB at 45.58 KB/sec
+2015-08-22 18:38:39,631 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.jar
+2015-08-22 18:38:39,876 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar
+2015-08-22 18:38:39,924 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.pom 2.01 KB 
+2015-08-22 18:38:40,082 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.pom 2.01 KB at 12.82 KB/sec
+2015-08-22 18:38:40,315 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.pom 3.07 KB 
+2015-08-22 18:38:40,420 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.pom 3.07 KB at 29.68 KB/sec
+2015-08-22 18:38:40,683 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.pom 1.92 KB 
+2015-08-22 18:38:40,824 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.pom 1.92 KB at 13.64 KB/sec
+2015-08-22 18:38:41,149 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-cli/commons-cli/1.0/commons-cli-1.0.jar
+2015-08-22 18:38:41,228 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.pom 2.00 KB 
+2015-08-22 18:38:41,252 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-collections/commons-collections/3.1/commons-collections-3.1.jar
+2015-08-22 18:38:41,276 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.pom 2.00 KB at 42.52 KB/sec
+2015-08-22 18:38:41,558 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.pom 1.86 KB 
+2015-08-22 18:38:42,334 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.pom 1.86 KB at 2.39 KB/sec
+2015-08-22 18:38:42,660 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-dbcp/commons-dbcp/1.4/commons-dbcp-1.4.jar
+2015-08-22 18:38:42,727 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.pom 1.70 KB 
+2015-08-22 18:38:42,798 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-logging/commons-logging/1.2/commons-logging-1.2.jar
+2015-08-22 18:38:42,830 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.pom 1.70 KB at 16.69 KB/sec
+2015-08-22 18:38:42,890 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-pool/commons-pool/1.5.4/commons-pool-1.5.4.jar
+2015-08-22 18:38:42,991 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:dom4j/dom4j/1.6.1/dom4j-1.6.1.jar
+2015-08-22 18:38:43,127 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom 2.65 KB 
+2015-08-22 18:38:43,301 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.pom 2.65 KB at 15.29 KB/sec
+2015-08-22 18:38:43,302 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:javassist/javassist/3.12.0.GA/javassist-3.12.0.GA.jar
+2015-08-22 18:38:43,590 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.pom 2.64 KB 
+2015-08-22 18:38:43,653 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.pom 2.64 KB at 41.98 KB/sec
+2015-08-22 18:38:43,705 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:javax/transaction/jta/1.1/jta-1.1.jar
+2015-08-22 18:38:43,841 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:junit/junit/3.8.1/junit-3.8.1.jar
+2015-08-22 18:38:43,882 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.pom 1.92 KB 
+2015-08-22 18:38:43,930 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.pom 1.92 KB at 40.41 KB/sec
+2015-08-22 18:38:43,968 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:mysql/mysql-connector-java/5.1.9/mysql-connector-java-5.1.9.jar
+2015-08-22 18:38:44,147 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/doxia/doxia-sink-api/1.0-alpha-7/doxia-sink-api-1.0-alpha-7.jar
+2015-08-22 18:38:44,155 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-artifact-manager/2.0.6/maven-artifact-manager-2.0.6.jar
+2015-08-22 18:38:44,174 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-artifact/2.0.6/maven-artifact-2.0.6.jar
+2015-08-22 18:38:44,213 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.pom 2.03 KB 
+2015-08-22 18:38:44,241 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.pom 2.03 KB at 72.86 KB/sec
+2015-08-22 18:38:44,360 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-core/2.0.6/maven-core-2.0.6.jar
+2015-08-22 18:38:44,425 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-error-diagnostics/2.0.6/maven-error-diagnostics-2.0.6.jar
+2015-08-22 18:38:44,436 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-model/2.0.6/maven-model-2.0.6.jar
+2015-08-22 18:38:44,467 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-monitor/2.0.6/maven-monitor-2.0.6.jar
+2015-08-22 18:38:44,477 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-api/2.0.6/maven-plugin-api-2.0.6.jar
+2015-08-22 18:38:44,486 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-descriptor/2.0.6/maven-plugin-descriptor-2.0.6.jar
+2015-08-22 18:38:44,489 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.pom 1.25 KB 
+2015-08-22 18:38:44,508 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.pom 1.25 KB at 68.17 KB/sec
+2015-08-22 18:38:44,515 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-parameter-documenter/2.0.6/maven-plugin-parameter-documenter-2.0.6.jar
+2015-08-22 18:38:44,531 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-registry/2.0.6/maven-plugin-registry-2.0.6.jar
+2015-08-22 18:38:44,567 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-profile/2.0.6/maven-profile-2.0.6.jar
+2015-08-22 18:38:44,581 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-project/2.0.6/maven-project-2.0.6.jar
+2015-08-22 18:38:44,651 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-repository-metadata/2.0.6/maven-repository-metadata-2.0.6.jar
+2015-08-22 18:38:44,667 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-settings/2.0.6/maven-settings-2.0.6.jar
+2015-08-22 18:38:44,692 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-clean-plugin/2.5/maven-clean-plugin-2.5.jar
+2015-08-22 18:38:44,714 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-compiler-plugin/3.1/maven-compiler-plugin-3.1.jar
+2015-08-22 18:38:44,735 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-install-plugin/2.4/maven-install-plugin-2.4.jar
+2015-08-22 18:38:44,746 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-resources-plugin/2.6/maven-resources-plugin-2.6.jar
+2015-08-22 18:38:44,751 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom 3.33 KB 
+2015-08-22 18:38:44,768 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.pom 3.33 KB at 205.85 KB/sec
+2015-08-22 18:38:44,769 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-surefire-plugin/2.12.4/maven-surefire-plugin-2.12.4.jar
+2015-08-22 18:38:44,790 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-war-plugin/2.2/maven-war-plugin-2.2.jar
+2015-08-22 18:38:44,858 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/reporting/maven-reporting-api/2.0.6/maven-reporting-api-2.0.6.jar
+2015-08-22 18:38:44,868 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/shared/maven-filtering/1.1/maven-filtering-1.1.jar
+2015-08-22 18:38:44,886 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar
+2015-08-22 18:38:45,013 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.pom 3.95 KB 
+2015-08-22 18:38:45,040 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.pom 3.95 KB at 147.73 KB/sec
+2015-08-22 18:38:45,048 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar
+2015-08-22 18:38:45,073 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-interpolation/1.13/plexus-interpolation-1.13.jar
+2015-08-22 18:38:45,103 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-utils/3.0/plexus-utils-3.0.jar
+2015-08-22 18:38:45,298 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar
+2015-08-22 18:38:45,320 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/18/maven-shared-components-18.pom 4.82 KB 
+2015-08-22 18:38:45,363 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/18/maven-shared-components-18.pom 4.82 KB at 115.14 KB/sec
+2015-08-22 18:38:45,404 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/hibernate/hibernate-core/3.6.9.Final/hibernate-core-3.6.9.Final.jar
+2015-08-22 18:38:45,582 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.pom 965 bytes 
+2015-08-22 18:38:45,624 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.pom 965 bytes at 22.79 KB/sec
+2015-08-22 18:38:45,934 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom 4.63 KB 
+2015-08-22 18:38:45,985 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.pom 4.63 KB at 90.71 KB/sec
+2015-08-22 18:38:46,271 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom 6.21 KB 
+2015-08-22 18:38:46,331 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/19/maven-shared-components-19.pom 6.21 KB at 103.85 KB/sec
+2015-08-22 18:38:46,750 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.pom 1.42 KB 
+2015-08-22 18:38:46,938 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.2.1/maven-plugin-api-2.2.1.pom 1.42 KB at 7.60 KB/sec
+2015-08-22 18:38:47,171 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven/2.2.1/maven-2.2.1.pom 21.88 KB 
+2015-08-22 18:38:47,241 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven/2.2.1/maven-2.2.1.pom 21.88 KB at 315.85 KB/sec
+2015-08-22 18:38:47,542 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/11/maven-parent-11.pom 31.65 KB 
+2015-08-22 18:38:47,712 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/11/maven-parent-11.pom 31.65 KB at 186.34 KB/sec
+2015-08-22 18:38:47,894 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/hibernate/hibernate-entitymanager/3.6.9.Final/hibernate-entitymanager-3.6.9.Final.jar
+2015-08-22 18:38:48,159 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.1.Final/hibernate-jpa-2.0-api-1.0.1.Final.jar
+2015-08-22 18:38:48,165 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/5/apache-5.pom 4.00 KB 
+2015-08-22 18:38:48,215 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/5/apache-5.pom 4.00 KB at 80.91 KB/sec
+2015-08-22 18:38:48,348 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar
+2015-08-22 18:38:48,387 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/sonatype/plexus/plexus-build-api/0.0.4/plexus-build-api-0.0.4.jar
+2015-08-22 18:38:48,426 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-aop/4.2.0.RELEASE/spring-aop-4.2.0.RELEASE.jar
+2015-08-22 18:38:48,596 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.pom 11.36 KB 
+2015-08-22 18:38:48,700 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-beans/4.2.0.RELEASE/spring-beans-4.2.0.RELEASE.jar
+2015-08-22 18:38:48,734 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-core/2.2.1/maven-core-2.2.1.pom 11.36 KB at 82.95 KB/sec
+2015-08-22 18:38:49,086 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.pom 2.13 KB 
+2015-08-22 18:38:49,294 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-settings/2.2.1/maven-settings-2.2.1.pom 2.13 KB at 10.24 KB/sec
+2015-08-22 18:38:49,363 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-context/4.2.0.RELEASE/spring-context-4.2.0.RELEASE.jar
+2015-08-22 18:38:49,524 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.pom 3.16 KB 
+2015-08-22 18:38:49,562 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-model/2.2.1/maven-model-2.2.1.pom 3.16 KB at 84.37 KB/sec
+2015-08-22 18:38:49,812 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.pom 889 bytes 
+2015-08-22 18:38:49,841 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.11/plexus-interpolation-1.11.pom 889 bytes at 29.80 KB/sec
+2015-08-22 18:38:49,953 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-core/4.2.0.RELEASE/spring-core-4.2.0.RELEASE.jar
+2015-08-22 18:38:50,071 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.pom 1.91 KB 
+2015-08-22 18:38:50,120 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.2.1/maven-plugin-parameter-documenter-2.2.1.pom 1.91 KB at 38.88 KB/sec
+2015-08-22 18:38:50,360 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.pom 1.85 KB 
+2015-08-22 18:38:50,482 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-jdk14/1.5.6/slf4j-jdk14-1.5.6.pom 1.85 KB at 15.32 KB/sec
+2015-08-22 18:38:50,489 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-expression/4.2.0.RELEASE/spring-expression-4.2.0.RELEASE.jar
+2015-08-22 18:38:50,732 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-jdbc/4.2.0.RELEASE/spring-jdbc-4.2.0.RELEASE.jar
+2015-08-22 18:38:50,762 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.5.6/slf4j-parent-1.5.6.pom 7.73 KB 
+2015-08-22 18:38:50,851 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-parent/1.5.6/slf4j-parent-1.5.6.pom 7.73 KB at 88.40 KB/sec
+2015-08-22 18:38:51,043 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-orm/4.2.0.RELEASE/spring-orm-4.2.0.RELEASE.jar
+2015-08-22 18:38:51,097 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.pom 2.91 KB 
+2015-08-22 18:38:51,220 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/slf4j-api/1.5.6/slf4j-api-1.5.6.pom 2.91 KB at 23.67 KB/sec
+2015-08-22 18:38:51,376 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-tx/4.2.0.RELEASE/spring-tx-4.2.0.RELEASE.jar
+2015-08-22 18:38:51,547 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.pom 2.12 KB 
+2015-08-22 18:38:51,733 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-web/4.2.0.RELEASE/spring-web-4.2.0.RELEASE.jar
+2015-08-22 18:38:51,735 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/slf4j/jcl-over-slf4j/1.5.6/jcl-over-slf4j-1.5.6.pom 2.12 KB at 11.29 KB/sec
+2015-08-22 18:38:51,954 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.pom 2.12 KB 
+2015-08-22 18:38:52,077 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-profile/2.2.1/maven-profile-2.2.1.pom 2.12 KB at 17.29 KB/sec
+2015-08-22 18:38:52,378 [art-exec-4] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/springframework/spring-webmvc/4.2.0.RELEASE/spring-webmvc-4.2.0.RELEASE.jar
+2015-08-22 18:38:52,408 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.pom 1.54 KB 
+2015-08-22 18:38:52,565 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.2.1/maven-artifact-2.2.1.pom 1.54 KB at 9.88 KB/sec
+2015-08-22 18:38:52,912 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom 1.83 KB 
+2015-08-22 18:38:53,117 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.2.1/maven-repository-metadata-2.2.1.pom 1.83 KB at 8.94 KB/sec
+2015-08-22 18:38:53,432 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.pom 1.67 KB 
+2015-08-22 18:38:53,518 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.2.1/maven-error-diagnostics-2.2.1.pom 1.67 KB at 19.44 KB/sec
+2015-08-22 18:38:53,807 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.pom 2.71 KB 
+2015-08-22 18:38:53,836 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-project/2.2.1/maven-project-2.2.1.pom 2.71 KB at 92.84 KB/sec
+2015-08-22 18:38:54,060 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.pom 3.03 KB 
+2015-08-22 18:38:54,092 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.2.1/maven-artifact-manager-2.2.1.pom 3.03 KB at 97.26 KB/sec
+2015-08-22 18:38:54,306 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.pom 880 bytes 
+2015-08-22 18:38:54,347 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/backport-util-concurrent/backport-util-concurrent/3.1/backport-util-concurrent-3.1.pom 880 bytes at 21.47 KB/sec
+2015-08-22 18:38:54,553 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.pom 1.88 KB 
+2015-08-22 18:38:54,591 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.2.1/maven-plugin-registry-2.2.1.pom 1.88 KB at 50.62 KB/sec
+2015-08-22 18:38:54,859 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.pom 2.02 KB 
+2015-08-22 18:38:54,903 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.2.1/maven-plugin-descriptor-2.2.1.pom 2.02 KB at 47.23 KB/sec
+2015-08-22 18:38:55,118 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.pom 1.23 KB 
+2015-08-22 18:38:55,147 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.2.1/maven-monitor-2.2.1.pom 1.23 KB at 42.88 KB/sec
+2015-08-22 18:38:55,354 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom 2.89 KB 
+2015-08-22 18:38:55,392 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.pom 2.89 KB at 77.45 KB/sec
+2015-08-22 18:38:55,589 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/spice/spice-parent/12/spice-parent-12.pom 6.64 KB 
+2015-08-22 18:38:55,625 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/spice/spice-parent/12/spice-parent-12.pom 6.64 KB at 191.79 KB/sec
+2015-08-22 18:38:55,847 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/forge/forge-parent/4/forge-parent-4.pom 8.20 KB 
+2015-08-22 18:38:55,914 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/forge/forge-parent/4/forge-parent-4.pom 8.20 KB at 124.19 KB/sec
+2015-08-22 18:38:56,206 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom 5.03 KB 
+2015-08-22 18:38:56,247 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.5/plexus-utils-1.5.5.pom 5.03 KB at 122.58 KB/sec
+2015-08-22 18:38:56,471 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom 2.02 KB 
+2015-08-22 18:38:56,520 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.pom 2.02 KB at 41.79 KB/sec
+2015-08-22 18:38:56,743 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom 815 bytes 
+2015-08-22 18:38:56,781 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.pom 815 bytes at 21.40 KB/sec
+2015-08-22 18:38:56,960 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom 4.14 KB 
+2015-08-22 18:38:56,992 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-containers/1.5.5/plexus-containers-1.5.5.pom 4.14 KB at 133.62 KB/sec
+2015-08-22 18:38:57,231 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom 16.89 KB 
+2015-08-22 18:38:57,303 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/2.0.7/plexus-2.0.7.pom 16.89 KB at 237.51 KB/sec
+2015-08-22 18:38:57,501 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom 865 bytes 
+2015-08-22 18:38:57,536 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.pom 865 bytes at 24.51 KB/sec
+2015-08-22 18:38:57,740 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom 3.53 KB 
+2015-08-22 18:38:57,770 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler/2.2/plexus-compiler-2.2.pom 3.53 KB at 122.32 KB/sec
+2015-08-22 18:38:57,985 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom 2.99 KB 
+2015-08-22 18:38:58,015 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.3.1/plexus-components-1.3.1.pom 2.99 KB at 104.87 KB/sec
+2015-08-22 18:38:58,213 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom 19.97 KB 
+2015-08-22 18:38:58,311 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.3.1/plexus-3.3.1.pom 19.97 KB at 207.12 KB/sec
+2015-08-22 18:38:58,502 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/spice/spice-parent/17/spice-parent-17.pom 6.60 KB 
+2015-08-22 18:38:58,526 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/spice/spice-parent/17/spice-parent-17.pom 6.60 KB at 282.83 KB/sec
+2015-08-22 18:38:58,722 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/sonatype/forge/forge-parent/10/forge-parent-10.pom 13.24 KB 
+2015-08-22 18:38:58,748 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/sonatype/forge/forge-parent/10/forge-parent-10.pom 13.24 KB at 518.74 KB/sec
+2015-08-22 18:38:58,983 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom 3.07 KB 
+2015-08-22 18:38:59,008 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.pom 3.07 KB at 126.14 KB/sec
+2015-08-22 18:38:59,220 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom 18.31 KB 
+2015-08-22 18:38:59,243 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.2/plexus-3.2.pom 18.31 KB at 852.67 KB/sec
+2015-08-22 18:38:59,455 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom 690 bytes 
+2015-08-22 18:38:59,476 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.pom 690 bytes at 34.17 KB/sec
+2015-08-22 18:38:59,653 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom 769 bytes 
+2015-08-22 18:38:59,732 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.pom 769 bytes at 9.60 KB/sec
+2015-08-22 18:38:59,883 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom 1.21 KB 
+2015-08-22 18:38:59,899 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compilers/2.2/plexus-compilers-2.2.pom 1.21 KB at 82.38 KB/sec
+2015-08-22 18:39:00,103 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.pom 2.69 KB 
+2015-08-22 18:39:00,120 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.pom 2.69 KB at 165.30 KB/sec
+2015-08-22 18:39:00,389 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.4.5/plexus-utils-1.4.5.pom 2.21 KB 
+2015-08-22 18:39:00,408 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.4.5/plexus-utils-1.4.5.pom 2.21 KB at 114.72 KB/sec
+2015-08-22 18:39:00,603 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.pom 3.94 KB 
+2015-08-22 18:39:00,621 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.pom 3.94 KB at 228.82 KB/sec
+2015-08-22 18:39:00,802 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom 2.74 KB 
+2015-08-22 18:39:00,819 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.pom 2.74 KB at 164.76 KB/sec
+2015-08-22 18:39:01,002 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/xbean/xbean/3.4/xbean-3.4.pom 18.10 KB 
+2015-08-22 18:39:01,031 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/xbean/xbean/3.4/xbean-3.4.pom 18.10 KB at 653.44 KB/sec
+2015-08-22 18:39:01,255 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/log4j/log4j/1.2.12/log4j-1.2.12.pom 145 bytes 
+2015-08-22 18:39:01,275 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/log4j/log4j/1.2.12/log4j-1.2.12.pom 145 bytes at 7.26 KB/sec
+2015-08-22 18:39:01,466 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom 5.22 KB 
+2015-08-22 18:39:01,530 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.pom 5.22 KB at 82.98 KB/sec
+2015-08-22 18:39:01,729 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/google/collections/google-collections/1.0/google-collections-1.0.pom 2.42 KB 
+2015-08-22 18:39:01,753 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/google/collections/google-collections/1.0/google-collections-1.0.pom 2.42 KB at 106.37 KB/sec
+2015-08-22 18:39:01,934 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/google/google/1/google-1.pom 1.52 KB 
+2015-08-22 18:39:01,953 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/google/google/1/google-1.pom 1.52 KB at 81.71 KB/sec
+2015-08-22 18:39:02,183 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/junit/junit/3.8.2/junit-3.8.2.pom 747 bytes 
+2015-08-22 18:39:02,198 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/junit/junit/3.8.2/junit-3.8.2.pom 747 bytes at 50.54 KB/sec
+2015-08-22 18:39:02,434 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar 86.83 KB 
+2015-08-22 18:39:02,500 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar 47.96 KB 
+2015-08-22 18:39:02,520 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar 155.89 KB 
+2015-08-22 18:39:02,542 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar 12.59 KB 
+2015-08-22 18:39:02,544 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar 86.83 KB at 792.59 KB/sec
+2015-08-22 18:39:02,577 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar 12.59 KB at 371.82 KB/sec
+2015-08-22 18:39:02,610 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar 47.96 KB at 441.53 KB/sec
+2015-08-22 18:39:02,661 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar 205.74 KB 
+2015-08-22 18:39:02,720 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar 155.89 KB at 780.95 KB/sec
+2015-08-22 18:39:02,742 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar 34.53 KB 
+2015-08-22 18:39:02,753 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar 20.39 KB 
+2015-08-22 18:39:02,767 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar 85.28 KB 
+2015-08-22 18:39:02,807 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar 34.53 KB at 531.23 KB/sec
+2015-08-22 18:39:02,832 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar 20.39 KB at 259.95 KB/sec
+2015-08-22 18:39:02,843 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar 85.28 KB at 1129.13 KB/sec
+2015-08-22 18:39:03,027 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar 13.46 KB 
+2015-08-22 18:39:03,035 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar 28.39 KB 
+2015-08-22 18:39:03,047 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar 23.98 KB 
+2015-08-22 18:39:03,053 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar 13.46 KB at 508.99 KB/sec
+2015-08-22 18:39:03,063 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar 118.93 KB 
+2015-08-22 18:39:03,080 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar 28.39 KB at 648.39 KB/sec
+2015-08-22 18:39:03,098 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar 23.98 KB at 466.78 KB/sec
+2015-08-22 18:39:03,198 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar 118.93 KB at 884.23 KB/sec
+2015-08-22 18:39:03,222 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar 205.74 KB at 367.08 KB/sec
+2015-08-22 18:39:03,239 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar 36.17 KB 
+2015-08-22 18:39:03,276 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar 36.17 KB at 988.82 KB/sec
+2015-08-22 18:39:03,297 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar 10.04 KB 
+2015-08-22 18:39:03,318 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar 56.48 KB 
+2015-08-22 18:39:03,335 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar 10.04 KB at 268.87 KB/sec
+2015-08-22 18:39:03,376 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar 56.48 KB at 970.14 KB/sec
+2015-08-22 18:39:03,383 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar 32.14 KB 
+2015-08-22 18:39:03,397 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar 150.90 KB 
+2015-08-22 18:39:03,403 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar 31.12 KB 
+2015-08-22 18:39:03,410 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar 32.14 KB at 1209.22 KB/sec
+2015-08-22 18:39:03,444 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar 31.12 KB at 769.05 KB/sec
+2015-08-22 18:39:03,544 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar 4.11 KB 
+2015-08-22 18:39:03,560 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar 24.40 KB 
+2015-08-22 18:39:03,565 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar 4.11 KB at 206.58 KB/sec
+2015-08-22 18:39:03,575 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar 13.22 KB 
+2015-08-22 18:39:03,598 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar 150.90 KB at 754.93 KB/sec
+2015-08-22 18:39:03,607 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar 24.40 KB at 532.78 KB/sec
+2015-08-22 18:39:03,611 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar 4.45 KB 
+2015-08-22 18:39:03,625 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar 13.22 KB at 264.78 KB/sec
+2015-08-22 18:39:03,643 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar 4.45 KB at 159.54 KB/sec
+2015-08-22 18:39:03,795 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar 45.01 KB 
+2015-08-22 18:39:03,813 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar 130.69 KB 
+2015-08-22 18:39:03,847 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar 45.01 KB at 871.87 KB/sec
+2015-08-22 18:39:03,851 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar 18.53 KB 
+2015-08-22 18:39:03,878 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar 18.53 KB at 680.37 KB/sec
+2015-08-22 18:39:03,940 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar 130.69 KB at 1043.88 KB/sec
+2015-08-22 18:39:03,993 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar 211.56 KB 
+2015-08-22 18:39:04,016 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar 43.55 KB 
+2015-08-22 18:39:04,053 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar 43.55 KB at 1200.62 KB/sec
+2015-08-22 18:39:04,080 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/junit/junit/3.8.2/junit-3.8.2.jar 117.81 KB 
+2015-08-22 18:39:04,120 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/log4j/log4j/1.2.12/log4j-1.2.12.jar 349.69 KB 
+2015-08-22 18:39:04,165 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/junit/junit/3.8.2/junit-3.8.2.jar 117.81 KB at 1390.89 KB/sec
+2015-08-22 18:39:04,311 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/google/collections/google-collections/1.0/google-collections-1.0.jar 624.60 KB 
+2015-08-22 18:39:04,553 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar 211.56 KB at 378.30 KB/sec
+2015-08-22 18:39:04,775 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/log4j/log4j/1.2.12/log4j-1.2.12.jar 349.69 KB at 533.81 KB/sec
+2015-08-22 18:39:05,435 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/google/collections/google-collections/1.0/google-collections-1.0.jar 624.60 KB at 555.82 KB/sec
+2015-08-22 18:39:09,732 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.pom 2.96 KB 
+2015-08-22 18:39:09,852 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.pom 2.96 KB at 24.92 KB/sec
+2015-08-22 18:39:10,174 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.pom 2.43 KB 
+2015-08-22 18:39:10,196 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.pom 2.43 KB at 141.86 KB/sec
+2015-08-22 18:39:10,441 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.pom 5.40 KB 
+2015-08-22 18:39:10,460 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.pom 5.40 KB at 296.68 KB/sec
+2015-08-22 18:39:10,721 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.pom 1.59 KB 
+2015-08-22 18:39:10,732 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.pom 1.59 KB at 160.88 KB/sec
+2015-08-22 18:39:10,933 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugin-tools/maven-plugin-tools/3.1/maven-plugin-tools-3.1.pom 15.80 KB 
+2015-08-22 18:39:10,985 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugin-tools/maven-plugin-tools/3.1/maven-plugin-tools-3.1.pom 15.80 KB at 310.55 KB/sec
+2015-08-22 18:39:11,183 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.pom 1.76 KB 
+2015-08-22 18:39:11,195 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.pom 1.76 KB at 150.70 KB/sec
+2015-08-22 18:39:11,347 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting/2.0.9/maven-reporting-2.0.9.pom 1.44 KB 
+2015-08-22 18:39:11,355 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting/2.0.9/maven-reporting-2.0.9.pom 1.44 KB at 187.51 KB/sec
+2015-08-22 18:39:11,559 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.pom 3.39 KB 
+2015-08-22 18:39:11,573 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.pom 3.39 KB at 253.59 KB/sec
+2015-08-22 18:39:11,765 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.pom 16.32 KB 
+2015-08-22 18:39:11,798 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.pom 16.32 KB at 512.57 KB/sec
+2015-08-22 18:39:12,029 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/commons/commons-parent/22/commons-parent-22.pom 40.94 KB 
+2015-08-22 18:39:12,132 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/commons/commons-parent/22/commons-parent-22.pom 40.94 KB at 399.78 KB/sec
+2015-08-22 18:39:12,336 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/9/apache-9.pom 14.80 KB 
+2015-08-22 18:39:12,350 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/9/apache-9.pom 14.80 KB at 1111.50 KB/sec
+2015-08-22 18:39:12,554 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.pom 3.62 KB 
+2015-08-22 18:39:12,564 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.pom 3.62 KB at 403.45 KB/sec
+2015-08-22 18:39:12,795 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/12/maven-shared-components-12.pom 9.12 KB 
+2015-08-22 18:39:12,820 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/12/maven-shared-components-12.pom 9.12 KB at 528.42 KB/sec
+2015-08-22 18:39:13,060 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/13/maven-parent-13.pom 22.10 KB 
+2015-08-22 18:39:13,077 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/13/maven-parent-13.pom 22.10 KB at 1369.54 KB/sec
+2015-08-22 18:39:13,227 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/apache/6/apache-6.pom 12.50 KB 
+2015-08-22 18:39:13,247 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/apache/6/apache-6.pom 12.50 KB at 656.49 KB/sec
+2015-08-22 18:39:13,445 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.pom 1.21 KB 
+2015-08-22 18:39:13,458 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-9/plexus-container-default-1.0-alpha-9.pom 1.21 KB at 110.16 KB/sec
+2015-08-22 18:39:13,684 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.jar 33.87 KB 
+2015-08-22 18:39:13,698 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.jar 114.83 KB 
+2015-08-22 18:39:13,701 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.jar 30.33 KB 
+2015-08-22 18:39:13,724 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.jar 33.87 KB at 858.19 KB/sec
+2015-08-22 18:39:13,751 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.jar 30.33 KB at 614.38 KB/sec
+2015-08-22 18:39:13,856 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.jar 114.83 KB at 727.31 KB/sec
+2015-08-22 18:39:13,905 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.jar 9.90 KB 
+2015-08-22 18:39:13,912 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.jar 256.47 KB 
+2015-08-22 18:39:13,923 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.jar 9.90 KB at 584.51 KB/sec
+2015-08-22 18:39:13,931 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar 308.40 KB 
+2015-08-22 18:39:14,074 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar 226.39 KB 
+2015-08-22 18:39:14,114 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.jar 13.69 KB 
+2015-08-22 18:39:14,122 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.jar 37.08 KB 
+2015-08-22 18:39:14,129 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.jar 13.69 KB at 885.30 KB/sec
+2015-08-22 18:39:14,151 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.jar 37.08 KB at 1306.87 KB/sec
+2015-08-22 18:39:14,408 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar 226.39 KB at 680.19 KB/sec
+2015-08-22 18:39:14,544 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.jar 256.47 KB at 405.98 KB/sec
+2015-08-22 18:39:14,561 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar 308.40 KB at 489.61 KB/sec
+2015-08-22 18:39:15,031 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom 4.43 KB 
+2015-08-22 18:39:15,054 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.pom 4.43 KB at 197.86 KB/sec
+2015-08-22 18:39:15,282 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom 2.74 KB 
+2015-08-22 18:39:15,293 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.pom 2.74 KB at 273.91 KB/sec
+2015-08-22 18:39:15,579 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom 1.69 KB 
+2015-08-22 18:39:15,589 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.pom 1.69 KB at 176.22 KB/sec
+2015-08-22 18:39:15,807 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.19/plexus-components-1.1.19.pom 2.63 KB 
+2015-08-22 18:39:15,816 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.19/plexus-components-1.1.19.pom 2.63 KB at 289.62 KB/sec
+2015-08-22 18:39:15,980 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.0.1/plexus-3.0.1.pom 18.18 KB 
+2015-08-22 18:39:16,026 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.0.1/plexus-3.0.1.pom 18.18 KB at 404.39 KB/sec
+2015-08-22 18:39:16,212 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom 1018 bytes 
+2015-08-22 18:39:16,221 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.pom 1018 bytes at 117.15 KB/sec
+2015-08-22 18:39:16,424 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom 11.17 KB 
+2015-08-22 18:39:16,451 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom 11.17 KB at 418.75 KB/sec
+2015-08-22 18:39:16,640 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom 13.66 KB 
+2015-08-22 18:39:16,653 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom 13.66 KB at 1062.23 KB/sec
+2015-08-22 18:39:16,829 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom 1.57 KB 
+2015-08-22 18:39:16,839 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom 1.57 KB at 168.26 KB/sec
+2015-08-22 18:39:17,056 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom 3.93 KB 
+2015-08-22 18:39:17,066 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom 3.93 KB at 409.73 KB/sec
+2015-08-22 18:39:17,287 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom 8.24 KB 
+2015-08-22 18:39:17,298 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom 8.24 KB at 810.14 KB/sec
+2015-08-22 18:39:17,480 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-parent/9/maven-parent-9.pom 32.07 KB 
+2015-08-22 18:39:17,528 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-parent/9/maven-parent-9.pom 32.07 KB at 688.71 KB/sec
+2015-08-22 18:39:17,704 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom 5.18 KB 
+2015-08-22 18:39:17,716 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom 5.18 KB at 439.21 KB/sec
+2015-08-22 18:39:17,911 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom 9.57 KB 
+2015-08-22 18:39:17,930 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom 9.57 KB at 507.68 KB/sec
+2015-08-22 18:39:18,197 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom 2.84 KB 
+2015-08-22 18:39:18,232 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom 2.84 KB at 82.28 KB/sec
+2015-08-22 18:39:18,468 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar 21.30 KB 
+2015-08-22 18:39:18,475 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar 59.06 KB 
+2015-08-22 18:39:18,488 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar 21.30 KB at 1401.71 KB/sec
+2015-08-22 18:39:18,495 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar 180.12 KB 
+2015-08-22 18:39:18,559 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar 59.06 KB at 699.17 KB/sec
+2015-08-22 18:39:18,564 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar 56.90 KB 
+2015-08-22 18:39:18,654 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar 56.90 KB at 636.94 KB/sec
+2015-08-22 18:39:18,659 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar 24.37 KB 
+2015-08-22 18:39:18,675 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar 24.37 KB at 1508.54 KB/sec
+2015-08-22 18:39:18,705 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar 180.12 KB at 861.36 KB/sec
+2015-08-22 18:39:18,712 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar 421.29 KB 
+2015-08-22 18:39:18,854 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar 32.40 KB 
+2015-08-22 18:39:18,873 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar 32.40 KB at 1755.09 KB/sec
+2015-08-22 18:39:19,671 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar 421.29 KB at 439.48 KB/sec
+2015-08-22 18:39:22,955 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.pom 2.45 KB 
+2015-08-22 18:39:23,036 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.pom 2.45 KB at 30.79 KB/sec
+2015-08-22 18:39:23,326 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.1/plexus-3.1.pom 18.18 KB 
+2015-08-22 18:39:23,372 [http-bio-8080-exec-4] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/3.1/plexus-3.1.pom 18.18 KB at 407.93 KB/sec
+2015-08-22 18:39:23,556 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.pom 1.03 KB 
+2015-08-22 18:39:23,569 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.pom 1.03 KB at 90.01 KB/sec
+2015-08-22 18:39:23,829 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.7/plexus-components-1.1.7.pom 4.86 KB 
+2015-08-22 18:39:23,842 [http-bio-8080-exec-5] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-components/1.1.7/plexus-components-1.1.7.pom 4.86 KB at 407.47 KB/sec
+2015-08-22 18:39:24,100 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.8/plexus-1.0.8.pom 7.06 KB 
+2015-08-22 18:39:24,111 [http-bio-8080-exec-6] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus/1.0.8/plexus-1.0.8.pom 7.06 KB at 678.16 KB/sec
+2015-08-22 18:39:24,376 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom 7.09 KB 
+2015-08-22 18:39:24,386 [http-bio-8080-exec-2] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-container-default/1.0-alpha-8/plexus-container-default-1.0-alpha-8.pom 7.09 KB at 738.84 KB/sec
+2015-08-22 18:39:24,616 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar 11.58 KB 
+2015-08-22 18:39:24,626 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar 36.64 KB 
+2015-08-22 18:39:24,629 [http-bio-8080-exec-9] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar 11.58 KB at 940.65 KB/sec
+2015-08-22 18:39:24,686 [http-bio-8080-exec-1] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar 36.64 KB at 616.35 KB/sec
+2015-08-22 18:39:24,899 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.jar 225.05 KB 
+2015-08-22 18:39:25,494 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.jar 225.05 KB at 378.59 KB/sec
+2015-08-22 18:39:28,487 [http-bio-8080-exec-6] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.war' Content-Length: 0
+2015-08-22 18:39:28,523 [http-bio-8080-exec-2] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.war' Content-Length: 13755903
+2015-08-22 18:39:29,238 [http-bio-8080-exec-9] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.pom' Content-Length: 1042
+2015-08-22 18:39:29,590 [http-bio-8080-exec-3] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.app.logging.api #4'
+2015-08-22 18:39:29,933 [http-bio-8080-exec-3] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.app.logging.api #4'
+2015-08-22 18:39:36,281 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:classworlds/classworlds/1.1-alpha-2/classworlds-1.1-alpha-2.jar
+2015-08-22 18:39:36,412 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:com/google/code/findbugs/jsr305/2.0.1/jsr305-2.0.1.jar
+2015-08-22 18:39:36,536 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:com/google/collections/google-collections/1.0/google-collections-1.0.jar
+2015-08-22 18:39:36,945 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
+2015-08-22 18:39:37,193 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-logging/commons-logging-api/1.1/commons-logging-api-1.1.jar
+2015-08-22 18:39:37,229 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:junit/junit/3.8.2/junit-3.8.2.jar
+2015-08-22 18:39:37,300 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:log4j/log4j/1.2.12/log4j-1.2.12.jar
+2015-08-22 18:39:37,488 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/commons/commons-lang3/3.1/commons-lang3-3.1.jar
+2015-08-22 18:39:37,588 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-archiver/2.5/maven-archiver-2.5.jar
+2015-08-22 18:39:37,597 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-artifact-manager/2.0.9/maven-artifact-manager-2.0.9.jar
+2015-08-22 18:39:37,614 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-artifact/2.0.9/maven-artifact-2.0.9.jar
+2015-08-22 18:39:37,696 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-core/2.0.9/maven-core-2.0.9.jar
+2015-08-22 18:39:37,836 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-error-diagnostics/2.0.9/maven-error-diagnostics-2.0.9.jar
+2015-08-22 18:39:37,843 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-model/2.0.9/maven-model-2.0.9.jar
+2015-08-22 18:39:37,883 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-monitor/2.0.9/maven-monitor-2.0.9.jar
+2015-08-22 18:39:37,890 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-api/2.0.9/maven-plugin-api-2.0.9.jar
+2015-08-22 18:39:37,908 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-descriptor/2.0.9/maven-plugin-descriptor-2.0.9.jar
+2015-08-22 18:39:37,920 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-parameter-documenter/2.0.9/maven-plugin-parameter-documenter-2.0.9.jar
+2015-08-22 18:39:37,928 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-plugin-registry/2.0.9/maven-plugin-registry-2.0.9.jar
+2015-08-22 18:39:37,938 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-profile/2.0.9/maven-profile-2.0.9.jar
+2015-08-22 18:39:37,960 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-project/2.0.9/maven-project-2.0.9.jar
+2015-08-22 18:39:37,990 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-repository-metadata/2.0.9/maven-repository-metadata-2.0.9.jar
+2015-08-22 18:39:37,999 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-settings/2.0.9/maven-settings-2.0.9.jar
+2015-08-22 18:39:38,013 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-toolchain/1.0/maven-toolchain-1.0.jar
+2015-08-22 18:39:38,046 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/maven-toolchain/2.0.9/maven-toolchain-2.0.9.jar
+2015-08-22 18:39:38,066 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugin-tools/maven-plugin-annotations/3.1/maven-plugin-annotations-3.1.jar
+2015-08-22 18:39:38,075 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/reporting/maven-reporting-api/2.0.9/maven-reporting-api-2.0.9.jar
+2015-08-22 18:39:38,085 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/shared/maven-common-artifact-filters/1.3/maven-common-artifact-filters-1.3.jar
+2015-08-22 18:39:38,109 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
+2015-08-22 18:39:38,130 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/shared/maven-shared-incremental/1.1/maven-shared-incremental-1.1.jar
+2015-08-22 18:39:38,163 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/shared/maven-shared-utils/0.1/maven-shared-utils-0.1.jar
+2015-08-22 18:39:38,416 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/surefire/maven-surefire-common/2.12.4/maven-surefire-common-2.12.4.jar
+2015-08-22 18:39:38,613 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/surefire/surefire-api/2.12.4/surefire-api-2.12.4.jar
+2015-08-22 18:39:38,768 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/surefire/surefire-booter/2.12.4/surefire-booter-2.12.4.jar
+2015-08-22 18:39:38,796 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/xbean/xbean-reflect/3.4/xbean-reflect-3.4.jar
+2015-08-22 18:39:38,945 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-archiver/2.1/plexus-archiver-2.1.jar
+2015-08-22 18:39:39,090 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-classworlds/2.2.2/plexus-classworlds-2.2.2.jar
+2015-08-22 18:39:39,118 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-compiler-api/2.2/plexus-compiler-api-2.2.jar
+2015-08-22 18:39:39,137 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-compiler-javac/2.2/plexus-compiler-javac-2.2.jar
+2015-08-22 18:39:39,146 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-compiler-manager/2.2/plexus-compiler-manager-2.2.jar
+2015-08-22 18:39:39,166 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar
+2015-08-22 18:39:39,178 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-container-default/1.5.5/plexus-container-default-1.5.5.jar
+2015-08-22 18:39:39,280 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-digest/1.0/plexus-digest-1.0.jar
+2015-08-22 18:39:39,298 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-interpolation/1.15/plexus-interpolation-1.15.jar
+2015-08-22 18:39:39,333 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-io/2.0.2/plexus-io-2.0.2.jar
+2015-08-22 18:39:39,360 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-utils/1.5.1/plexus-utils-1.5.1.jar
+2015-08-22 18:39:39,423 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-utils/2.0.5/plexus-utils-2.0.5.jar
+2015-08-22 18:39:39,486 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-utils/3.0.5/plexus-utils-3.0.5.jar
+2015-08-22 18:39:39,556 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/codehaus/plexus/plexus-utils/3.0.8/plexus-utils-3.0.8.jar
+2015-08-22 18:39:39,598 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
+2015-08-22 18:39:39,604 [art-exec-3] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-20150822.183728-1.war
+2015-08-22 18:42:22,893 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom 5.70 KB 
+2015-08-22 18:42:22,989 [http-bio-8080-exec-3] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.pom 5.70 KB at 59.21 KB/sec
+2015-08-22 18:42:23,235 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar 33.22 KB 
+2015-08-22 18:42:23,290 [http-bio-8080-exec-7] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar 33.22 KB at 619.58 KB/sec
+2015-08-22 18:42:27,414 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-lang/commons-lang/2.1/commons-lang-2.1.pom 9.70 KB 
+2015-08-22 18:42:27,439 [http-bio-8080-exec-8] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-lang/commons-lang/2.1/commons-lang-2.1.pom 9.70 KB at 393.60 KB/sec
+2015-08-22 18:42:28,148 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :358) - jcenter downloading http://jcenter.bintray.com/commons-lang/commons-lang/2.1/commons-lang-2.1.jar 202.85 KB 
+2015-08-22 18:42:28,680 [http-bio-8080-exec-10] [INFO ] (o.a.r.HttpRepo      :371) - jcenter downloaded  http://jcenter.bintray.com/commons-lang/commons-lang/2.1/commons-lang-2.1.jar 202.85 KB at 382.07 KB/sec
+2015-08-22 18:42:30,835 [http-bio-8080-exec-4] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/api/host/lib/0.0.1-SNAPSHOT/lib-0.0.1-SNAPSHOT.jar' Content-Length: 1630
+2015-08-22 18:42:30,961 [http-bio-8080-exec-6] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/api/host/lib/0.0.1-SNAPSHOT/lib-0.0.1-SNAPSHOT.pom' Content-Length: 862
+2015-08-22 18:42:31,048 [http-bio-8080-exec-9] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.api.host.lib #3'
+2015-08-22 18:42:31,120 [http-bio-8080-exec-9] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.api.host.lib #3'
+2015-08-22 18:42:36,279 [art-exec-1] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:commons-lang/commons-lang/2.1/commons-lang-2.1.jar
+2015-08-22 18:42:36,471 [art-exec-1] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: jcenter-cache:org/apache/maven/plugins/maven-jar-plugin/2.4/maven-jar-plugin-2.4.jar
+2015-08-22 18:42:36,519 [art-exec-1] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/api/host/lib/0.0.1-SNAPSHOT/lib-0.0.1-20150822.184209-1.jar
+2015-08-22 18:42:56,987 [http-bio-8080-exec-8] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.war' Content-Length: 0
+2015-08-22 18:42:57,064 [http-bio-8080-exec-4] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.war' Content-Length: 13755906
+2015-08-22 18:42:57,661 [http-bio-8080-exec-1] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.pom' Content-Length: 1042
+2015-08-22 18:42:57,722 [http-bio-8080-exec-4] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.app.logging.api #5'
+2015-08-22 18:42:57,762 [http-bio-8080-exec-4] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.app.logging.api #5'
+2015-08-22 18:43:36,278 [art-exec-2] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-20150822.184239-2.war
+2015-08-22 18:43:56,169 [http-bio-8080-exec-4] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/api/common/lib/0.0.1-SNAPSHOT/lib-0.0.1-SNAPSHOT.jar' Content-Length: 2021
+2015-08-22 18:43:56,380 [http-bio-8080-exec-8] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/api/common/lib/0.0.1-SNAPSHOT/lib-0.0.1-SNAPSHOT.pom' Content-Length: 3045
+2015-08-22 18:43:56,479 [http-bio-8080-exec-6] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.api.common.lib #2'
+2015-08-22 18:43:56,627 [http-bio-8080-exec-6] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.api.common.lib #2'
+2015-08-22 18:44:17,012 [http-bio-8080-exec-3] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/api/host/lib/0.0.1-SNAPSHOT/lib-0.0.1-SNAPSHOT.jar' Content-Length: 1630
+2015-08-22 18:44:17,325 [http-bio-8080-exec-2] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/api/host/lib/0.0.1-SNAPSHOT/lib-0.0.1-SNAPSHOT.pom' Content-Length: 862
+2015-08-22 18:44:17,450 [http-bio-8080-exec-4] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.api.host.lib #4'
+2015-08-22 18:44:17,585 [http-bio-8080-exec-4] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.api.host.lib #4'
+2015-08-22 18:44:36,280 [art-exec-2] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/api/common/lib/0.0.1-SNAPSHOT/lib-0.0.1-20150822.184342-1.jar
+2015-08-22 18:44:36,296 [art-exec-2] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/api/host/lib/0.0.1-SNAPSHOT/lib-0.0.1-20150822.184404-2.jar
+2015-08-22 18:44:41,381 [http-bio-8080-exec-7] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.war' Content-Length: 0
+2015-08-22 18:44:41,447 [http-bio-8080-exec-6] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.war' Content-Length: 13755902
+2015-08-22 18:44:41,988 [http-bio-8080-exec-5] [INFO ] (o.a.e.UploadServiceImpl:442) - Deploy to 'libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.pom' Content-Length: 1042
+2015-08-22 18:44:42,125 [http-bio-8080-exec-1] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.app.logging.api #6'
+2015-08-22 18:44:42,223 [http-bio-8080-exec-1] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.app.logging.api #6'
+2015-08-22 18:45:36,279 [art-exec-1] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-20150822.184424-3.war

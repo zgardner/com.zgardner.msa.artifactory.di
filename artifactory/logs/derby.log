@@ -1,0 +1,144 @@
+----------------------------------------------------------------
+Sat Aug 22 18:21:24 UTC 2015:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-014f-56a4-c99c-0000011d9dc0 
+on database directory /artifactory/data/derby  with class loader WebappClassLoader
+  context: /artifactory
+  delegate: false
+  repositories:
+    /WEB-INF/classes/
+----------> Parent Classloader:
+org.apache.catalina.loader.StandardClassLoader@32f60451
+ 
+Loaded from file:/usr/local/tomcat/webapps/artifactory/WEB-INF/lib/derby-10.9.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_79-b14
+user.dir=/artifactory
+derby.system.home=null
+derby.stream.error.file=/artifactory/logs/derby.log
+Database Class Loader started - derby.database.classpath=''
+Sat Aug 22 18:43:54 UTC 2015 Thread[PoolCleaner[608316892:1440267684867],5,main] 
+ERROR 25001: Cannot close a connection while a transaction is still active.
+java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkForTransactionInProgress(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.close(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 15 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkForTransactionInProgress(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.close(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+============= end nested exception, level (1) ===========
+Sat Aug 22 18:44:54 UTC 2015 Thread[PoolCleaner[608316892:1440267684867],5,main] 
+ERROR 25001: Cannot close a connection while a transaction is still active.
+java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkForTransactionInProgress(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.close(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 15 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkForTransactionInProgress(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.close(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+============= end nested exception, level (1) ===========
+Sat Aug 22 18:50:54 UTC 2015 Thread[PoolCleaner[608316892:1440267684867],5,main] 
+ERROR 25001: Cannot close a connection while a transaction is still active.
+java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkForTransactionInProgress(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.close(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	... 15 more
+============= begin nested exception, level (1) ===========
+java.sql.SQLException: Cannot close a connection while a transaction is still active.
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.wrapArgsForTransportAcrossDRDA(Unknown Source)
+	at org.apache.derby.impl.jdbc.SQLExceptionFactory40.getSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.newEmbedSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.Util.generateCsSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.newSQLException(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.checkForTransactionInProgress(Unknown Source)
+	at org.apache.derby.impl.jdbc.EmbedConnection.close(Unknown Source)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.disconnect(PooledConnection.java:331)
+	at org.apache.tomcat.jdbc.pool.PooledConnection.release(PooledConnection.java:496)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.release(ConnectionPool.java:582)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:1000)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool.checkIdle(ConnectionPool.java:981)
+	at org.apache.tomcat.jdbc.pool.ConnectionPool$PoolCleaner.run(ConnectionPool.java:1348)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+============= end nested exception, level (1) ===========

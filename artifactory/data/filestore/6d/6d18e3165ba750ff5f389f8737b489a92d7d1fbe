@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.zgardner.msa.api.common</groupId>
+  <artifactId>lib</artifactId>
+  <version>0.0.1-20150822.184342-1</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20150822.184342</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20150822184356</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>0.0.1-20150822.184342-1</value>
+        <updated>20150822184342</updated>
+      </snapshotVersion>
+      <snapshotVersion>
+        <extension>jar</extension>
+        <value>0.0.1-20150822.184342-1</value>
+        <updated>20150822184342</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>
