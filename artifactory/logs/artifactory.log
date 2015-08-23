@@ -1103,3 +1103,35 @@
 2015-08-22 18:44:42,125 [http-bio-8080-exec-1] [INFO ] (o.a.r.r.c.BuildResource:296) - Adding build 'com.zgardner.msa.app.logging.api #6'
 2015-08-22 18:44:42,223 [http-bio-8080-exec-1] [INFO ] (o.a.r.r.c.BuildResource:313) - Added build 'com.zgardner.msa.app.logging.api #6'
 2015-08-22 18:45:36,279 [art-exec-1] [INFO ] (o.a.s.a.ArchiveIndexerImpl:147) - Indexing archive: libs-snapshot-local:com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-20150822.184424-3.war
+2015-08-22 19:12:59,158 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.interceptor.StorageAggregationInterceptors
+2015-08-22 19:12:59,190 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.md.MetadataDefinitionService
+2015-08-22 19:12:59,190 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.cleanup.InternalArtifactCleanupService
+2015-08-22 19:12:59,191 [localhost-startStop-2] [INFO ] (o.a.s.BaseTaskServiceDescriptorHandler:41) - Removing all job Artifact Cleanup from task service handler.
+2015-08-22 19:12:59,212 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.traffic.InternalTrafficService
+2015-08-22 19:12:59,212 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.maven.index.InternalMavenIndexerService
+2015-08-22 19:12:59,218 [localhost-startStop-2] [INFO ] (o.a.s.BaseTaskServiceDescriptorHandler:41) - Removing all job Indexer from task service handler.
+2015-08-22 19:12:59,222 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.interceptor.ImportInterceptors
+2015-08-22 19:12:59,223 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.cleanup.InternalFolderPruningService
+2015-08-22 19:12:59,223 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.cache.expirable.CacheExpiry
+2015-08-22 19:12:59,224 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.search.InternalSearchService
+2015-08-22 19:12:59,225 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.storage.db.servers.service.ArtifactoryHeartbeatService
+2015-08-22 19:12:59,225 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.cleanup.InternalVirtualCacheCleanupService
+2015-08-22 19:12:59,225 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.build.InternalBuildService
+2015-08-22 19:12:59,226 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.backup.InternalBackupService
+2015-08-22 19:12:59,226 [localhost-startStop-2] [INFO ] (o.a.s.BaseTaskServiceDescriptorHandler:41) - Removing all job Backup from task service handler.
+2015-08-22 19:12:59,264 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.cleanup.InternalIntegrationCleanupService
+2015-08-22 19:12:59,265 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.security.ldap.InternalLdapAuthenticator
+2015-08-22 19:12:59,265 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.storage.InternalStorageService
+2015-08-22 19:12:59,266 [localhost-startStop-2] [INFO ] (o.a.s.BaseTaskServiceDescriptorHandler:41) - Removing all job Garbage Collector from task service handler.
+2015-08-22 19:12:59,269 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.security.interceptor.SecurityConfigurationChangesInterceptors
+2015-08-22 19:12:59,269 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.security.InternalSecurityService
+2015-08-22 19:12:59,269 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.engine.InternalDownloadService
+2015-08-22 19:12:59,270 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.service.InternalRepositoryService
+2015-08-22 19:12:59,331 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.schedule.TaskService
+2015-08-22 19:12:59,342 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.state.model.ArtifactoryStateManager
+2015-08-22 19:12:59,463 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.config.InternalCentralConfigService
+2015-08-22 19:12:59,463 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.config.ConfigurationChangesInterceptors
+2015-08-22 19:12:59,463 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.repo.interceptor.StorageInterceptors
+2015-08-22 19:12:59,530 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:303) - Destroying org.artifactory.storage.db.DbService
+2015-08-22 19:12:59,571 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactoryApplicationContext:317) - Closing Artifactory: startup date [Sat Aug 22 18:21:18 UTC 2015]; root of context hierarchy
+2015-08-22 19:13:00,370 [localhost-startStop-2] [INFO ] (o.a.s.ArtifactorySchedulerFactoryBean:765) - Shutting down Quartz Scheduler

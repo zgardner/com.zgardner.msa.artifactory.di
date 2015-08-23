@@ -1008,3 +1008,5 @@
 20150822184746|1|REQUEST|10.0.2.2|admin|GET|/simple/libs-snapshot-local/com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT|HTTP/1.1|302|0
 20150822184746|30|REQUEST|10.0.2.2|admin|GET|/simple/libs-snapshot-local/com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/|HTTP/1.1|200|0
 20150822184753|81|REQUEST|10.0.2.2|admin|GET|/libs-snapshot-local/com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/|HTTP/1.1|200|0
+20150822185610|3|REQUEST|10.0.2.2|admin|GET|/api/repositories|HTTP/1.1|200|0
+20150822185626|5|REQUEST|10.0.2.2|non_authenticated_user|GET|/libs-snapshot/com/zgardner/msa/app/logging/api/0.0.1-SNAPSHOT/api-0.0.1-SNAPSHOT.jar|HTTP/1.1|404|0
