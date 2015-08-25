@@ -16,4 +16,5 @@ echo "Removing existing container $container_name..."
 docker rm $container_name
 
 echo "Starting new container $container_name..."
+echo "-- docker run -d --name $container_name -v $host_volume_data_mount_path:$container_volume_data_mount_path -v $host_volume_logs_mount_path:$container_volume_logs_mount_path -v $host_volume_backup_mount_path:$container_volume_backup_mount_path -p $host_artifactory_port:$container_artifactory_port mattgruter/artifactory:$artifactory_version --"
 docker run -d --name $container_name -v $host_volume_data_mount_path:$container_volume_data_mount_path -v $host_volume_logs_mount_path:$container_volume_logs_mount_path -v $host_volume_backup_mount_path:$container_volume_backup_mount_path -p $host_artifactory_port:$container_artifactory_port mattgruter/artifactory:$artifactory_version
